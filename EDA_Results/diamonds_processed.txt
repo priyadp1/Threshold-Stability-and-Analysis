@@ -1,0 +1,73 @@
+DataFrame for diamonds_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 53940 entries, 0 to 53939
+Data columns (total 22 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   carat      53940 non-null  float64
+ 1   depth      53940 non-null  float64
+ 2   table      53940 non-null  float64
+ 3   x          53940 non-null  float64
+ 4   y          53940 non-null  float64
+ 5   z          53940 non-null  float64
+ 6   color_0    53940 non-null  int64  
+ 7   color_1    53940 non-null  int64  
+ 8   color_2    53940 non-null  int64  
+ 9   color_3    53940 non-null  int64  
+ 10  color_4    53940 non-null  int64  
+ 11  color_5    53940 non-null  int64  
+ 12  color_6    53940 non-null  int64  
+ 13  clarity_0  53940 non-null  int64  
+ 14  clarity_1  53940 non-null  int64  
+ 15  clarity_2  53940 non-null  int64  
+ 16  clarity_3  53940 non-null  int64  
+ 17  clarity_4  53940 non-null  int64  
+ 18  clarity_5  53940 non-null  int64  
+ 19  clarity_6  53940 non-null  int64  
+ 20  clarity_7  53940 non-null  int64  
+ 21  label      53940 non-null  int64  
+dtypes: float64(6), int64(16)
+memory usage: 9.1 MB
+
+ Statistics: 
+              carat         depth         table  ...     clarity_6     clarity_7         label
+count  53940.000000  53940.000000  53940.000000  ...  53940.000000  53940.000000  53940.000000
+mean       0.797940     61.749405     57.457184  ...      0.067760      0.093919      0.399537
+std        0.474011      1.432621      2.234491  ...      0.251337      0.291719      0.489808
+min        0.200000     43.000000     43.000000  ...      0.000000      0.000000      0.000000
+25%        0.400000     61.000000     56.000000  ...      0.000000      0.000000      0.000000
+50%        0.700000     61.800000     57.000000  ...      0.000000      0.000000      0.000000
+75%        1.040000     62.500000     59.000000  ...      0.000000      0.000000      1.000000
+max        5.010000     79.000000     95.000000  ...      1.000000      1.000000      1.000000
+
+[8 rows x 22 columns]
+ Number of Null Values: 
+carat        0
+depth        0
+table        0
+x            0
+y            0
+z            0
+color_0      0
+color_1      0
+color_2      0
+color_3      0
+color_4      0
+color_5      0
+color_6      0
+clarity_0    0
+clarity_1    0
+clarity_2    0
+clarity_3    0
+clarity_4    0
+clarity_5    0
+clarity_6    0
+clarity_7    0
+label        0
+dtype: int64
+Shape: 
+(53940, 22)
+Columns: 
+['carat', 'depth', 'table', 'x', 'y', 'z', 'color_0', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'clarity_0', 'clarity_1', 'clarity_2', 'clarity_3', 'clarity_4', 'clarity_5', 'clarity_6', 'clarity_7', 'label']

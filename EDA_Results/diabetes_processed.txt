@@ -1,0 +1,73 @@
+DataFrame for diabetes_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 253680 entries, 0 to 253679
+Data columns (total 22 columns):
+ #   Column                Non-Null Count   Dtype
+---  ------                --------------   -----
+ 0   HighBP                253680 non-null  int64
+ 1   HighChol              253680 non-null  int64
+ 2   CholCheck             253680 non-null  int64
+ 3   BMI                   253680 non-null  int64
+ 4   Smoker                253680 non-null  int64
+ 5   Stroke                253680 non-null  int64
+ 6   HeartDiseaseorAttack  253680 non-null  int64
+ 7   PhysActivity          253680 non-null  int64
+ 8   Fruits                253680 non-null  int64
+ 9   Veggies               253680 non-null  int64
+ 10  HvyAlcoholConsump     253680 non-null  int64
+ 11  AnyHealthcare         253680 non-null  int64
+ 12  NoDocbcCost           253680 non-null  int64
+ 13  GenHlth               253680 non-null  int64
+ 14  MentHlth              253680 non-null  int64
+ 15  PhysHlth              253680 non-null  int64
+ 16  DiffWalk              253680 non-null  int64
+ 17  Sex                   253680 non-null  int64
+ 18  Age                   253680 non-null  int64
+ 19  Education             253680 non-null  int64
+ 20  Income                253680 non-null  int64
+ 21  label                 253680 non-null  int64
+dtypes: int64(22)
+memory usage: 42.6 MB
+
+ Statistics: 
+              HighBP       HighChol      CholCheck  ...      Education         Income          label
+count  253680.000000  253680.000000  253680.000000  ...  253680.000000  253680.000000  253680.000000
+mean        0.429001       0.424121       0.962670  ...       5.050434       6.053875       0.139333
+std         0.494934       0.494210       0.189571  ...       0.985774       2.071148       0.346294
+min         0.000000       0.000000       0.000000  ...       1.000000       1.000000       0.000000
+25%         0.000000       0.000000       1.000000  ...       4.000000       5.000000       0.000000
+50%         0.000000       0.000000       1.000000  ...       5.000000       7.000000       0.000000
+75%         1.000000       1.000000       1.000000  ...       6.000000       8.000000       0.000000
+max         1.000000       1.000000       1.000000  ...       6.000000       8.000000       1.000000
+
+[8 rows x 22 columns]
+ Number of Null Values: 
+HighBP                  0
+HighChol                0
+CholCheck               0
+BMI                     0
+Smoker                  0
+Stroke                  0
+HeartDiseaseorAttack    0
+PhysActivity            0
+Fruits                  0
+Veggies                 0
+HvyAlcoholConsump       0
+AnyHealthcare           0
+NoDocbcCost             0
+GenHlth                 0
+MentHlth                0
+PhysHlth                0
+DiffWalk                0
+Sex                     0
+Age                     0
+Education               0
+Income                  0
+label                   0
+dtype: int64
+Shape: 
+(253680, 22)
+Columns: 
+['HighBP', 'HighChol', 'CholCheck', 'BMI', 'Smoker', 'Stroke', 'HeartDiseaseorAttack', 'PhysActivity', 'Fruits', 'Veggies', 'HvyAlcoholConsump', 'AnyHealthcare', 'NoDocbcCost', 'GenHlth', 'MentHlth', 'PhysHlth', 'DiffWalk', 'Sex', 'Age', 'Education', 'Income', 'label']

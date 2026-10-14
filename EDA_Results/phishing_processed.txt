@@ -1,0 +1,91 @@
+DataFrame for phishing_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 11055 entries, 0 to 11054
+Data columns (total 31 columns):
+ #   Column                      Non-Null Count  Dtype
+---  ------                      --------------  -----
+ 0   having_ip_address           11055 non-null  int64
+ 1   url_length                  11055 non-null  int64
+ 2   shortining_service          11055 non-null  int64
+ 3   having_at_symbol            11055 non-null  int64
+ 4   double_slash_redirecting    11055 non-null  int64
+ 5   prefix_suffix               11055 non-null  int64
+ 6   having_sub_domain           11055 non-null  int64
+ 7   sslfinal_state              11055 non-null  int64
+ 8   domain_registration_length  11055 non-null  int64
+ 9   favicon                     11055 non-null  int64
+ 10  port                        11055 non-null  int64
+ 11  https_token                 11055 non-null  int64
+ 12  request_url                 11055 non-null  int64
+ 13  url_of_anchor               11055 non-null  int64
+ 14  links_in_tags               11055 non-null  int64
+ 15  sfh                         11055 non-null  int64
+ 16  submitting_to_email         11055 non-null  int64
+ 17  abnormal_url                11055 non-null  int64
+ 18  redirect                    11055 non-null  int64
+ 19  on_mouseover                11055 non-null  int64
+ 20  rightclick                  11055 non-null  int64
+ 21  popupwindow                 11055 non-null  int64
+ 22  iframe                      11055 non-null  int64
+ 23  age_of_domain               11055 non-null  int64
+ 24  dnsrecord                   11055 non-null  int64
+ 25  web_traffic                 11055 non-null  int64
+ 26  page_rank                   11055 non-null  int64
+ 27  google_index                11055 non-null  int64
+ 28  links_pointing_to_page      11055 non-null  int64
+ 29  statistical_report          11055 non-null  int64
+ 30  label                       11055 non-null  int64
+dtypes: int64(31)
+memory usage: 2.6 MB
+
+ Statistics: 
+       having_ip_address    url_length  ...  statistical_report         label
+count       11055.000000  11055.000000  ...        11055.000000  11055.000000
+mean            0.313795     -0.633198  ...            0.719584      0.556943
+std             0.949534      0.766095  ...            0.694437      0.496769
+min            -1.000000     -1.000000  ...           -1.000000      0.000000
+25%            -1.000000     -1.000000  ...            1.000000      0.000000
+50%             1.000000     -1.000000  ...            1.000000      1.000000
+75%             1.000000     -1.000000  ...            1.000000      1.000000
+max             1.000000      1.000000  ...            1.000000      1.000000
+
+[8 rows x 31 columns]
+ Number of Null Values: 
+having_ip_address             0
+url_length                    0
+shortining_service            0
+having_at_symbol              0
+double_slash_redirecting      0
+prefix_suffix                 0
+having_sub_domain             0
+sslfinal_state                0
+domain_registration_length    0
+favicon                       0
+port                          0
+https_token                   0
+request_url                   0
+url_of_anchor                 0
+links_in_tags                 0
+sfh                           0
+submitting_to_email           0
+abnormal_url                  0
+redirect                      0
+on_mouseover                  0
+rightclick                    0
+popupwindow                   0
+iframe                        0
+age_of_domain                 0
+dnsrecord                     0
+web_traffic                   0
+page_rank                     0
+google_index                  0
+links_pointing_to_page        0
+statistical_report            0
+label                         0
+dtype: int64
+Shape: 
+(11055, 31)
+Columns: 
+['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwindow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'label']

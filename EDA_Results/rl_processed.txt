@@ -1,0 +1,107 @@
+DataFrame for rl_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4970 entries, 0 to 4969
+Data columns (total 39 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   V1      4970 non-null   float64
+ 1   V5      4970 non-null   float64
+ 2   V6      4970 non-null   float64
+ 3   V20     4970 non-null   float64
+ 4   V21     4970 non-null   float64
+ 5   V8_0    4970 non-null   int64  
+ 6   V8_2    4970 non-null   int64  
+ 7   V14_0   4970 non-null   int64  
+ 8   V14_1   4970 non-null   int64  
+ 9   V14_2   4970 non-null   int64  
+ 10  V15_0   4970 non-null   int64  
+ 11  V17_0   4970 non-null   int64  
+ 12  V17_1   4970 non-null   int64  
+ 13  V17_2   4970 non-null   int64  
+ 14  V18_0   4970 non-null   int64  
+ 15  V18_1   4970 non-null   int64  
+ 16  V19_0   4970 non-null   int64  
+ 17  V19_1   4970 non-null   int64  
+ 18  V22_0   4970 non-null   int64  
+ 19  V22_1   4970 non-null   int64  
+ 20  V22_10  4970 non-null   int64  
+ 21  V22_11  4970 non-null   int64  
+ 22  V22_12  4970 non-null   int64  
+ 23  V22_13  4970 non-null   int64  
+ 24  V22_14  4970 non-null   int64  
+ 25  V22_15  4970 non-null   int64  
+ 26  V22_16  4970 non-null   int64  
+ 27  V22_17  4970 non-null   int64  
+ 28  V22_18  4970 non-null   int64  
+ 29  V22_19  4970 non-null   int64  
+ 30  V22_2   4970 non-null   int64  
+ 31  V22_3   4970 non-null   int64  
+ 32  V22_4   4970 non-null   int64  
+ 33  V22_5   4970 non-null   int64  
+ 34  V22_6   4970 non-null   int64  
+ 35  V22_7   4970 non-null   int64  
+ 36  V22_8   4970 non-null   int64  
+ 37  V22_9   4970 non-null   int64  
+ 38  label   4970 non-null   int64  
+dtypes: float64(5), int64(34)
+memory usage: 1.5 MB
+
+ Statistics: 
+                V1           V5           V6          V20  ...        V22_7        V22_8        V22_9       label
+count  4970.000000  4970.000000  4970.000000  4970.000000  ...  4970.000000  4970.000000  4970.000000  4970.00000
+mean    226.442455     6.606237    17.387123   152.842857  ...     0.001811     0.001811     0.003421     0.50000
+std     111.125246     7.929154    12.582344   142.194144  ...     0.042520     0.042520     0.058391     0.50005
+min      46.000000     0.000000     2.000000     1.000000  ...     0.000000     0.000000     0.000000     0.00000
+25%     160.500000     1.000000     9.000000    23.000000  ...     0.000000     0.000000     0.000000     0.00000
+50%     238.000000     4.000000    13.000000    96.000000  ...     0.000000     0.000000     0.000000     0.50000
+75%     272.000000     9.000000    23.000000   294.000000  ...     0.000000     0.000000     0.000000     1.00000
+max    1448.000000    69.000000    72.000000   405.000000  ...     1.000000     1.000000     1.000000     1.00000
+
+[8 rows x 39 columns]
+ Number of Null Values: 
+V1        0
+V5        0
+V6        0
+V20       0
+V21       0
+V8_0      0
+V8_2      0
+V14_0     0
+V14_1     0
+V14_2     0
+V15_0     0
+V17_0     0
+V17_1     0
+V17_2     0
+V18_0     0
+V18_1     0
+V19_0     0
+V19_1     0
+V22_0     0
+V22_1     0
+V22_10    0
+V22_11    0
+V22_12    0
+V22_13    0
+V22_14    0
+V22_15    0
+V22_16    0
+V22_17    0
+V22_18    0
+V22_19    0
+V22_2     0
+V22_3     0
+V22_4     0
+V22_5     0
+V22_6     0
+V22_7     0
+V22_8     0
+V22_9     0
+label     0
+dtype: int64
+Shape: 
+(4970, 39)
+Columns: 
+['V1', 'V5', 'V6', 'V20', 'V21', 'V8_0', 'V8_2', 'V14_0', 'V14_1', 'V14_2', 'V15_0', 'V17_0', 'V17_1', 'V17_2', 'V18_0', 'V18_1', 'V19_0', 'V19_1', 'V22_0', 'V22_1', 'V22_10', 'V22_11', 'V22_12', 'V22_13', 'V22_14', 'V22_15', 'V22_16', 'V22_17', 'V22_18', 'V22_19', 'V22_2', 'V22_3', 'V22_4', 'V22_5', 'V22_6', 'V22_7', 'V22_8', 'V22_9', 'label']

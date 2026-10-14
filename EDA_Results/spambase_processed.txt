@@ -1,0 +1,145 @@
+DataFrame for spambase_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4601 entries, 0 to 4600
+Data columns (total 58 columns):
+ #   Column                      Non-Null Count  Dtype  
+---  ------                      --------------  -----  
+ 0   word_freq_make              4601 non-null   float64
+ 1   word_freq_address           4601 non-null   float64
+ 2   word_freq_all               4601 non-null   float64
+ 3   word_freq_3d                4601 non-null   float64
+ 4   word_freq_our               4601 non-null   float64
+ 5   word_freq_over              4601 non-null   float64
+ 6   word_freq_remove            4601 non-null   float64
+ 7   word_freq_internet          4601 non-null   float64
+ 8   word_freq_order             4601 non-null   float64
+ 9   word_freq_mail              4601 non-null   float64
+ 10  word_freq_receive           4601 non-null   float64
+ 11  word_freq_will              4601 non-null   float64
+ 12  word_freq_people            4601 non-null   float64
+ 13  word_freq_report            4601 non-null   float64
+ 14  word_freq_addresses         4601 non-null   float64
+ 15  word_freq_free              4601 non-null   float64
+ 16  word_freq_business          4601 non-null   float64
+ 17  word_freq_email             4601 non-null   float64
+ 18  word_freq_you               4601 non-null   float64
+ 19  word_freq_credit            4601 non-null   float64
+ 20  word_freq_your              4601 non-null   float64
+ 21  word_freq_font              4601 non-null   float64
+ 22  word_freq_000               4601 non-null   float64
+ 23  word_freq_money             4601 non-null   float64
+ 24  word_freq_hp                4601 non-null   float64
+ 25  word_freq_hpl               4601 non-null   float64
+ 26  word_freq_george            4601 non-null   float64
+ 27  word_freq_650               4601 non-null   float64
+ 28  word_freq_lab               4601 non-null   float64
+ 29  word_freq_labs              4601 non-null   float64
+ 30  word_freq_telnet            4601 non-null   float64
+ 31  word_freq_857               4601 non-null   float64
+ 32  word_freq_data              4601 non-null   float64
+ 33  word_freq_415               4601 non-null   float64
+ 34  word_freq_85                4601 non-null   float64
+ 35  word_freq_technology        4601 non-null   float64
+ 36  word_freq_1999              4601 non-null   float64
+ 37  word_freq_parts             4601 non-null   float64
+ 38  word_freq_pm                4601 non-null   float64
+ 39  word_freq_direct            4601 non-null   float64
+ 40  word_freq_cs                4601 non-null   float64
+ 41  word_freq_meeting           4601 non-null   float64
+ 42  word_freq_original          4601 non-null   float64
+ 43  word_freq_project           4601 non-null   float64
+ 44  word_freq_re                4601 non-null   float64
+ 45  word_freq_edu               4601 non-null   float64
+ 46  word_freq_table             4601 non-null   float64
+ 47  word_freq_conference        4601 non-null   float64
+ 48  char_freq_;                 4601 non-null   float64
+ 49  char_freq_(                 4601 non-null   float64
+ 50  char_freq_[                 4601 non-null   float64
+ 51  char_freq_!                 4601 non-null   float64
+ 52  char_freq_$                 4601 non-null   float64
+ 53  char_freq_#                 4601 non-null   float64
+ 54  capital_run_length_average  4601 non-null   float64
+ 55  capital_run_length_longest  4601 non-null   int64  
+ 56  capital_run_length_total    4601 non-null   int64  
+ 57  label                       4601 non-null   int64  
+dtypes: float64(55), int64(3)
+memory usage: 2.0 MB
+
+ Statistics: 
+       word_freq_make  word_freq_address  ...  capital_run_length_total        label
+count     4601.000000        4601.000000  ...               4601.000000  4601.000000
+mean         0.104553           0.213015  ...                283.289285     0.394045
+std          0.305358           1.290575  ...                606.347851     0.488698
+min          0.000000           0.000000  ...                  1.000000     0.000000
+25%          0.000000           0.000000  ...                 35.000000     0.000000
+50%          0.000000           0.000000  ...                 95.000000     0.000000
+75%          0.000000           0.000000  ...                266.000000     1.000000
+max          4.540000          14.280000  ...              15841.000000     1.000000
+
+[8 rows x 58 columns]
+ Number of Null Values: 
+word_freq_make                0
+word_freq_address             0
+word_freq_all                 0
+word_freq_3d                  0
+word_freq_our                 0
+word_freq_over                0
+word_freq_remove              0
+word_freq_internet            0
+word_freq_order               0
+word_freq_mail                0
+word_freq_receive             0
+word_freq_will                0
+word_freq_people              0
+word_freq_report              0
+word_freq_addresses           0
+word_freq_free                0
+word_freq_business            0
+word_freq_email               0
+word_freq_you                 0
+word_freq_credit              0
+word_freq_your                0
+word_freq_font                0
+word_freq_000                 0
+word_freq_money               0
+word_freq_hp                  0
+word_freq_hpl                 0
+word_freq_george              0
+word_freq_650                 0
+word_freq_lab                 0
+word_freq_labs                0
+word_freq_telnet              0
+word_freq_857                 0
+word_freq_data                0
+word_freq_415                 0
+word_freq_85                  0
+word_freq_technology          0
+word_freq_1999                0
+word_freq_parts               0
+word_freq_pm                  0
+word_freq_direct              0
+word_freq_cs                  0
+word_freq_meeting             0
+word_freq_original            0
+word_freq_project             0
+word_freq_re                  0
+word_freq_edu                 0
+word_freq_table               0
+word_freq_conference          0
+char_freq_;                   0
+char_freq_(                   0
+char_freq_[                   0
+char_freq_!                   0
+char_freq_$                   0
+char_freq_#                   0
+capital_run_length_average    0
+capital_run_length_longest    0
+capital_run_length_total      0
+label                         0
+dtype: int64
+Shape: 
+(4601, 58)
+Columns: 
+['word_freq_make', 'word_freq_address', 'word_freq_all', 'word_freq_3d', 'word_freq_our', 'word_freq_over', 'word_freq_remove', 'word_freq_internet', 'word_freq_order', 'word_freq_mail', 'word_freq_receive', 'word_freq_will', 'word_freq_people', 'word_freq_report', 'word_freq_addresses', 'word_freq_free', 'word_freq_business', 'word_freq_email', 'word_freq_you', 'word_freq_credit', 'word_freq_your', 'word_freq_font', 'word_freq_000', 'word_freq_money', 'word_freq_hp', 'word_freq_hpl', 'word_freq_george', 'word_freq_650', 'word_freq_lab', 'word_freq_labs', 'word_freq_telnet', 'word_freq_857', 'word_freq_data', 'word_freq_415', 'word_freq_85', 'word_freq_technology', 'word_freq_1999', 'word_freq_parts', 'word_freq_pm', 'word_freq_direct', 'word_freq_cs', 'word_freq_meeting', 'word_freq_original', 'word_freq_project', 'word_freq_re', 'word_freq_edu', 'word_freq_table', 'word_freq_conference', 'char_freq_;', 'char_freq_(', 'char_freq_[', 'char_freq_!', 'char_freq_$', 'char_freq_#', 'capital_run_length_average', 'capital_run_length_longest', 'capital_run_length_total', 'label']

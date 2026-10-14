@@ -1,0 +1,51 @@
+DataFrame for magic_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 19020 entries, 0 to 19019
+Data columns (total 11 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   fLength   19020 non-null  float64
+ 1   fWidth    19020 non-null  float64
+ 2   fSize     19020 non-null  float64
+ 3   fConc     19020 non-null  float64
+ 4   fConc1    19020 non-null  float64
+ 5   fAsym     19020 non-null  float64
+ 6   fM3Long   19020 non-null  float64
+ 7   fM3Trans  19020 non-null  float64
+ 8   fAlpha    19020 non-null  float64
+ 9   fDist     19020 non-null  float64
+ 10  label     19020 non-null  int64  
+dtypes: float64(10), int64(1)
+memory usage: 1.6 MB
+
+ Statistics: 
+            fLength        fWidth         fSize  ...        fAlpha         fDist         label
+count  19020.000000  19020.000000  19020.000000  ...  19020.000000  19020.000000  19020.000000
+mean      53.250154     22.180966      2.825017  ...     27.645707    193.818026      0.648370
+std       42.364855     18.346056      0.472599  ...     26.103621     74.731787      0.477492
+min        4.283500      0.000000      1.941300  ...      0.000000      1.282600      0.000000
+25%       24.336000     11.863800      2.477100  ...      5.547925    142.492250      0.000000
+50%       37.147700     17.139900      2.739600  ...     17.679500    191.851450      1.000000
+75%       70.122175     24.739475      3.101600  ...     45.883550    240.563825      1.000000
+max      334.177000    256.382000      5.323300  ...     90.000000    495.561000      1.000000
+
+[8 rows x 11 columns]
+ Number of Null Values: 
+fLength     0
+fWidth      0
+fSize       0
+fConc       0
+fConc1      0
+fAsym       0
+fM3Long     0
+fM3Trans    0
+fAlpha      0
+fDist       0
+label       0
+dtype: int64
+Shape: 
+(19020, 11)
+Columns: 
+['fLength', 'fWidth', 'fSize', 'fConc', 'fConc1', 'fAsym', 'fM3Long', 'fM3Trans', 'fAlpha', 'fDist', 'label']

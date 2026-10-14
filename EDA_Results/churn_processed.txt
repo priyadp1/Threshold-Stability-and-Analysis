@@ -1,0 +1,97 @@
+DataFrame for churn_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5000 entries, 0 to 4999
+Data columns (total 34 columns):
+ #   Column                           Non-Null Count  Dtype  
+---  ------                           --------------  -----  
+ 0   state                            5000 non-null   int64  
+ 1   account_length                   5000 non-null   int64  
+ 2   phone_number                     5000 non-null   int64  
+ 3   number_vmail_messages            5000 non-null   int64  
+ 4   total_day_minutes                5000 non-null   float64
+ 5   total_day_calls                  5000 non-null   int64  
+ 6   total_day_charge                 5000 non-null   float64
+ 7   total_eve_minutes                5000 non-null   float64
+ 8   total_eve_calls                  5000 non-null   int64  
+ 9   total_eve_charge                 5000 non-null   float64
+ 10  total_night_minutes              5000 non-null   float64
+ 11  total_night_calls                5000 non-null   int64  
+ 12  total_night_charge               5000 non-null   float64
+ 13  total_intl_minutes               5000 non-null   float64
+ 14  total_intl_calls                 5000 non-null   int64  
+ 15  total_intl_charge                5000 non-null   float64
+ 16  area_code_408                    5000 non-null   int64  
+ 17  area_code_415                    5000 non-null   int64  
+ 18  area_code_510                    5000 non-null   int64  
+ 19  international_plan_0             5000 non-null   int64  
+ 20  international_plan_1             5000 non-null   int64  
+ 21  voice_mail_plan_0                5000 non-null   int64  
+ 22  voice_mail_plan_1                5000 non-null   int64  
+ 23  number_customer_service_calls_0  5000 non-null   int64  
+ 24  number_customer_service_calls_1  5000 non-null   int64  
+ 25  number_customer_service_calls_2  5000 non-null   int64  
+ 26  number_customer_service_calls_3  5000 non-null   int64  
+ 27  number_customer_service_calls_4  5000 non-null   int64  
+ 28  number_customer_service_calls_5  5000 non-null   int64  
+ 29  number_customer_service_calls_6  5000 non-null   int64  
+ 30  number_customer_service_calls_7  5000 non-null   int64  
+ 31  number_customer_service_calls_8  5000 non-null   int64  
+ 32  number_customer_service_calls_9  5000 non-null   int64  
+ 33  label                            5000 non-null   int64  
+dtypes: float64(8), int64(26)
+memory usage: 1.3 MB
+
+ Statistics: 
+            state  account_length  ...  number_customer_service_calls_9        label
+count  5000.00000      5000.00000  ...                      5000.000000  5000.000000
+mean     25.99840       100.25860  ...                         0.000400     0.141400
+std      14.80348        39.69456  ...                         0.019998     0.348469
+min       0.00000         1.00000  ...                         0.000000     0.000000
+25%      13.00000        73.00000  ...                         0.000000     0.000000
+50%      26.00000       100.00000  ...                         0.000000     0.000000
+75%      39.00000       127.00000  ...                         0.000000     0.000000
+max      50.00000       243.00000  ...                         1.000000     1.000000
+
+[8 rows x 34 columns]
+ Number of Null Values: 
+state                              0
+account_length                     0
+phone_number                       0
+number_vmail_messages              0
+total_day_minutes                  0
+total_day_calls                    0
+total_day_charge                   0
+total_eve_minutes                  0
+total_eve_calls                    0
+total_eve_charge                   0
+total_night_minutes                0
+total_night_calls                  0
+total_night_charge                 0
+total_intl_minutes                 0
+total_intl_calls                   0
+total_intl_charge                  0
+area_code_408                      0
+area_code_415                      0
+area_code_510                      0
+international_plan_0               0
+international_plan_1               0
+voice_mail_plan_0                  0
+voice_mail_plan_1                  0
+number_customer_service_calls_0    0
+number_customer_service_calls_1    0
+number_customer_service_calls_2    0
+number_customer_service_calls_3    0
+number_customer_service_calls_4    0
+number_customer_service_calls_5    0
+number_customer_service_calls_6    0
+number_customer_service_calls_7    0
+number_customer_service_calls_8    0
+number_customer_service_calls_9    0
+label                              0
+dtype: int64
+Shape: 
+(5000, 34)
+Columns: 
+['state', 'account_length', 'phone_number', 'number_vmail_messages', 'total_day_minutes', 'total_day_calls', 'total_day_charge', 'total_eve_minutes', 'total_eve_calls', 'total_eve_charge', 'total_night_minutes', 'total_night_calls', 'total_night_charge', 'total_intl_minutes', 'total_intl_calls', 'total_intl_charge', 'area_code_408', 'area_code_415', 'area_code_510', 'international_plan_0', 'international_plan_1', 'voice_mail_plan_0', 'voice_mail_plan_1', 'number_customer_service_calls_0', 'number_customer_service_calls_1', 'number_customer_service_calls_2', 'number_customer_service_calls_3', 'number_customer_service_calls_4', 'number_customer_service_calls_5', 'number_customer_service_calls_6', 'number_customer_service_calls_7', 'number_customer_service_calls_8', 'number_customer_service_calls_9', 'label']

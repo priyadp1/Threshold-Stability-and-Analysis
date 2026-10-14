@@ -1,0 +1,55 @@
+DataFrame for bike_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 17379 entries, 0 to 17378
+Data columns (total 13 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   season      17379 non-null  int64  
+ 1   yr          17379 non-null  int64  
+ 2   mnth        17379 non-null  int64  
+ 3   hr          17379 non-null  int64  
+ 4   holiday     17379 non-null  int64  
+ 5   weekday     17379 non-null  int64  
+ 6   workingday  17379 non-null  int64  
+ 7   weathersit  17379 non-null  int64  
+ 8   temp        17379 non-null  float64
+ 9   atemp       17379 non-null  float64
+ 10  hum         17379 non-null  float64
+ 11  windspeed   17379 non-null  float64
+ 12  label       17379 non-null  int64  
+dtypes: float64(4), int64(9)
+memory usage: 1.7 MB
+
+ Statistics: 
+             season            yr          mnth  ...           hum     windspeed         label
+count  17379.000000  17379.000000  17379.000000  ...  17379.000000  17379.000000  17379.000000
+mean       2.501640      0.502561      6.537775  ...      0.627229      0.190098      0.501065
+std        1.106918      0.500008      3.438776  ...      0.192930      0.122340      0.500013
+min        1.000000      0.000000      1.000000  ...      0.000000      0.000000      0.000000
+25%        2.000000      0.000000      4.000000  ...      0.480000      0.104500      0.000000
+50%        3.000000      1.000000      7.000000  ...      0.630000      0.194000      1.000000
+75%        3.000000      1.000000     10.000000  ...      0.780000      0.253700      1.000000
+max        4.000000      1.000000     12.000000  ...      1.000000      0.850700      1.000000
+
+[8 rows x 13 columns]
+ Number of Null Values: 
+season        0
+yr            0
+mnth          0
+hr            0
+holiday       0
+weekday       0
+workingday    0
+weathersit    0
+temp          0
+atemp         0
+hum           0
+windspeed     0
+label         0
+dtype: int64
+Shape: 
+(17379, 13)
+Columns: 
+['season', 'yr', 'mnth', 'hr', 'holiday', 'weekday', 'workingday', 'weathersit', 'temp', 'atemp', 'hum', 'windspeed', 'label']

@@ -1,0 +1,125 @@
+DataFrame for bank_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 45211 entries, 0 to 45210
+Data columns (total 48 columns):
+ #   Column               Non-Null Count  Dtype
+---  ------               --------------  -----
+ 0   age                  45211 non-null  int64
+ 1   balance              45211 non-null  int64
+ 2   day_of_week          45211 non-null  int64
+ 3   duration             45211 non-null  int64
+ 4   campaign             45211 non-null  int64
+ 5   pdays                45211 non-null  int64
+ 6   previous             45211 non-null  int64
+ 7   job_admin.           45211 non-null  bool 
+ 8   job_blue-collar      45211 non-null  bool 
+ 9   job_entrepreneur     45211 non-null  bool 
+ 10  job_housemaid        45211 non-null  bool 
+ 11  job_management       45211 non-null  bool 
+ 12  job_retired          45211 non-null  bool 
+ 13  job_self-employed    45211 non-null  bool 
+ 14  job_services         45211 non-null  bool 
+ 15  job_student          45211 non-null  bool 
+ 16  job_technician       45211 non-null  bool 
+ 17  job_unemployed       45211 non-null  bool 
+ 18  marital_divorced     45211 non-null  bool 
+ 19  marital_married      45211 non-null  bool 
+ 20  marital_single       45211 non-null  bool 
+ 21  education_primary    45211 non-null  bool 
+ 22  education_secondary  45211 non-null  bool 
+ 23  education_tertiary   45211 non-null  bool 
+ 24  default_no           45211 non-null  bool 
+ 25  default_yes          45211 non-null  bool 
+ 26  housing_no           45211 non-null  bool 
+ 27  housing_yes          45211 non-null  bool 
+ 28  loan_no              45211 non-null  bool 
+ 29  loan_yes             45211 non-null  bool 
+ 30  contact_cellular     45211 non-null  bool 
+ 31  contact_telephone    45211 non-null  bool 
+ 32  month_apr            45211 non-null  bool 
+ 33  month_aug            45211 non-null  bool 
+ 34  month_dec            45211 non-null  bool 
+ 35  month_feb            45211 non-null  bool 
+ 36  month_jan            45211 non-null  bool 
+ 37  month_jul            45211 non-null  bool 
+ 38  month_jun            45211 non-null  bool 
+ 39  month_mar            45211 non-null  bool 
+ 40  month_may            45211 non-null  bool 
+ 41  month_nov            45211 non-null  bool 
+ 42  month_oct            45211 non-null  bool 
+ 43  month_sep            45211 non-null  bool 
+ 44  poutcome_failure     45211 non-null  bool 
+ 45  poutcome_other       45211 non-null  bool 
+ 46  poutcome_success     45211 non-null  bool 
+ 47  label                45211 non-null  int64
+dtypes: bool(40), int64(8)
+memory usage: 4.5 MB
+
+ Statistics: 
+                age        balance   day_of_week  ...         pdays      previous         label
+count  45211.000000   45211.000000  45211.000000  ...  45211.000000  45211.000000  45211.000000
+mean      40.936210    1362.272058     15.806419  ...     40.197828      0.580323      0.116985
+std       10.618762    3044.765829      8.322476  ...    100.128746      2.303441      0.321406
+min       18.000000   -8019.000000      1.000000  ...     -1.000000      0.000000      0.000000
+25%       33.000000      72.000000      8.000000  ...     -1.000000      0.000000      0.000000
+50%       39.000000     448.000000     16.000000  ...     -1.000000      0.000000      0.000000
+75%       48.000000    1428.000000     21.000000  ...     -1.000000      0.000000      0.000000
+max       95.000000  102127.000000     31.000000  ...    871.000000    275.000000      1.000000
+
+[8 rows x 8 columns]
+ Number of Null Values: 
+age                    0
+balance                0
+day_of_week            0
+duration               0
+campaign               0
+pdays                  0
+previous               0
+job_admin.             0
+job_blue-collar        0
+job_entrepreneur       0
+job_housemaid          0
+job_management         0
+job_retired            0
+job_self-employed      0
+job_services           0
+job_student            0
+job_technician         0
+job_unemployed         0
+marital_divorced       0
+marital_married        0
+marital_single         0
+education_primary      0
+education_secondary    0
+education_tertiary     0
+default_no             0
+default_yes            0
+housing_no             0
+housing_yes            0
+loan_no                0
+loan_yes               0
+contact_cellular       0
+contact_telephone      0
+month_apr              0
+month_aug              0
+month_dec              0
+month_feb              0
+month_jan              0
+month_jul              0
+month_jun              0
+month_mar              0
+month_may              0
+month_nov              0
+month_oct              0
+month_sep              0
+poutcome_failure       0
+poutcome_other         0
+poutcome_success       0
+label                  0
+dtype: int64
+Shape: 
+(45211, 48)
+Columns: 
+['age', 'balance', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous', 'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'month_apr', 'month_aug', 'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun', 'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'label']

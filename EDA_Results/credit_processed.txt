@@ -1,0 +1,77 @@
+DataFrame for credit_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 30000 entries, 0 to 29999
+Data columns (total 24 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   x1      30000 non-null  int64
+ 1   x2      30000 non-null  int64
+ 2   x3      30000 non-null  int64
+ 3   x4      30000 non-null  int64
+ 4   x5      30000 non-null  int64
+ 5   x6      30000 non-null  int64
+ 6   x7      30000 non-null  int64
+ 7   x8      30000 non-null  int64
+ 8   x9      30000 non-null  int64
+ 9   x10     30000 non-null  int64
+ 10  x11     30000 non-null  int64
+ 11  x12     30000 non-null  int64
+ 12  x13     30000 non-null  int64
+ 13  x14     30000 non-null  int64
+ 14  x15     30000 non-null  int64
+ 15  x16     30000 non-null  int64
+ 16  x17     30000 non-null  int64
+ 17  x18     30000 non-null  int64
+ 18  x19     30000 non-null  int64
+ 19  x20     30000 non-null  int64
+ 20  x21     30000 non-null  int64
+ 21  x22     30000 non-null  int64
+ 22  x23     30000 non-null  int64
+ 23  label   30000 non-null  int64
+dtypes: int64(24)
+memory usage: 5.5 MB
+
+ Statistics: 
+                   x1            x2            x3  ...            x22            x23         label
+count    30000.000000  30000.000000  30000.000000  ...   30000.000000   30000.000000  30000.000000
+mean    167484.322667      1.603733      1.853133  ...    4799.387633    5215.502567      0.221200
+std     129747.661567      0.489129      0.790349  ...   15278.305679   17777.465775      0.415062
+min      10000.000000      1.000000      0.000000  ...       0.000000       0.000000      0.000000
+25%      50000.000000      1.000000      1.000000  ...     252.500000     117.750000      0.000000
+50%     140000.000000      2.000000      2.000000  ...    1500.000000    1500.000000      0.000000
+75%     240000.000000      2.000000      2.000000  ...    4031.500000    4000.000000      0.000000
+max    1000000.000000      2.000000      6.000000  ...  426529.000000  528666.000000      1.000000
+
+[8 rows x 24 columns]
+ Number of Null Values: 
+x1       0
+x2       0
+x3       0
+x4       0
+x5       0
+x6       0
+x7       0
+x8       0
+x9       0
+x10      0
+x11      0
+x12      0
+x13      0
+x14      0
+x15      0
+x16      0
+x17      0
+x18      0
+x19      0
+x20      0
+x21      0
+x22      0
+x23      0
+label    0
+dtype: int64
+Shape: 
+(30000, 24)
+Columns: 
+['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13', 'x14', 'x15', 'x16', 'x17', 'x18', 'x19', 'x20', 'x21', 'x22', 'x23', 'label']

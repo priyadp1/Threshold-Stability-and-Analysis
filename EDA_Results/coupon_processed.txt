@@ -1,0 +1,105 @@
+DataFrame for coupon_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 108 entries, 0 to 107
+Data columns (total 65 columns):
+ #   Column                                            Non-Null Count  Dtype
+---  ------                                            --------------  -----
+ 0   temperature                                       108 non-null    int64
+ 1   has_children                                      108 non-null    int64
+ 2   toCoupon_GEQ5min                                  108 non-null    int64
+ 3   toCoupon_GEQ15min                                 108 non-null    int64
+ 4   toCoupon_GEQ25min                                 108 non-null    int64
+ 5   direction_same                                    108 non-null    int64
+ 6   direction_opp                                     108 non-null    int64
+ 7   destination_Home                                  108 non-null    int64
+ 8   destination_No Urgent Place                       108 non-null    int64
+ 9   destination_Work                                  108 non-null    int64
+ 10  passenger_Alone                                   108 non-null    int64
+ 11  passenger_Friend(s)                               108 non-null    int64
+ 12  passenger_Kid(s)                                  108 non-null    int64
+ 13  weather_Rainy                                     108 non-null    int64
+ 14  weather_Snowy                                     108 non-null    int64
+ 15  weather_Sunny                                     108 non-null    int64
+ 16  time_10AM                                         108 non-null    int64
+ 17  time_10PM                                         108 non-null    int64
+ 18  time_2PM                                          108 non-null    int64
+ 19  time_6PM                                          108 non-null    int64
+ 20  time_7AM                                          108 non-null    int64
+ 21  coupon_Bar                                        108 non-null    int64
+ 22  coupon_Carry out & Take away                      108 non-null    int64
+ 23  coupon_Coffee House                               108 non-null    int64
+ 24  coupon_Restaurant(20-50)                          108 non-null    int64
+ 25  coupon_Restaurant(<20)                            108 non-null    int64
+ 26  expiration_1d                                     108 non-null    int64
+ 27  expiration_2h                                     108 non-null    int64
+ 28  gender_Female                                     108 non-null    int64
+ 29  gender_Male                                       108 non-null    int64
+ 30  age_21                                            108 non-null    int64
+ 31  age_26                                            108 non-null    int64
+ 32  age_41                                            108 non-null    int64
+ 33  maritalStatus_Married partner                     108 non-null    int64
+ 34  maritalStatus_Single                              108 non-null    int64
+ 35  education_Associates degree                       108 non-null    int64
+ 36  education_Bachelors degree                        108 non-null    int64
+ 37  education_Graduate degree (Masters or Doctorate)  108 non-null    int64
+ 38  occupation_Computer & Mathematical                108 non-null    int64
+ 39  occupation_Legal                                  108 non-null    int64
+ 40  occupation_Office & Administrative Support        108 non-null    int64
+ 41  occupation_Sales & Related                        108 non-null    int64
+ 42  income_$100000 or More                            108 non-null    int64
+ 43  income_$12500 - $24999                            108 non-null    int64
+ 44  income_$37500 - $49999                            108 non-null    int64
+ 45  income_$87500 - $99999                            108 non-null    int64
+ 46  car_Car that is too old to install Onstar :D      108 non-null    int64
+ 47  car_Mazda5                                        108 non-null    int64
+ 48  car_Scooter and motorcycle                        108 non-null    int64
+ 49  car_crossover                                     108 non-null    int64
+ 50  car_do not drive                                  108 non-null    int64
+ 51  Bar_gt8                                           108 non-null    int64
+ 52  Bar_less1                                         108 non-null    int64
+ 53  Bar_never                                         108 non-null    int64
+ 54  CoffeeHouse_1~3                                   108 non-null    int64
+ 55  CoffeeHouse_4~8                                   108 non-null    int64
+ 56  CoffeeHouse_less1                                 108 non-null    int64
+ 57  CarryAway_1~3                                     108 non-null    int64
+ 58  CarryAway_4~8                                     108 non-null    int64
+ 59  RestaurantLessThan20_1~3                          108 non-null    int64
+ 60  RestaurantLessThan20_less1                        108 non-null    int64
+ 61  Restaurant20To50_1~3                              108 non-null    int64
+ 62  Restaurant20To50_less1                            108 non-null    int64
+ 63  Restaurant20To50_never                            108 non-null    int64
+ 64  label                                             108 non-null    int64
+dtypes: int64(65)
+memory usage: 55.0 KB
+
+ Statistics: 
+       temperature  has_children  toCoupon_GEQ5min  ...  Restaurant20To50_less1  Restaurant20To50_never       label
+count   108.000000    108.000000             108.0  ...              108.000000              108.000000  108.000000
+mean     62.870370      0.398148               1.0  ...                0.592593                0.203704    0.574074
+std      17.971989      0.491798               0.0  ...                0.493643                0.404629    0.496788
+min      30.000000      0.000000               1.0  ...                0.000000                0.000000    0.000000
+25%      55.000000      0.000000               1.0  ...                0.000000                0.000000    0.000000
+50%      55.000000      0.000000               1.0  ...                1.000000                0.000000    1.000000
+75%      80.000000      1.000000               1.0  ...                1.000000                0.000000    1.000000
+max      80.000000      1.000000               1.0  ...                1.000000                1.000000    1.000000
+
+[8 rows x 65 columns]
+ Number of Null Values: 
+temperature                   0
+has_children                  0
+toCoupon_GEQ5min              0
+toCoupon_GEQ15min             0
+toCoupon_GEQ25min             0
+                             ..
+RestaurantLessThan20_less1    0
+Restaurant20To50_1~3          0
+Restaurant20To50_less1        0
+Restaurant20To50_never        0
+label                         0
+Length: 65, dtype: int64
+Shape: 
+(108, 65)
+Columns: 
+['temperature', 'has_children', 'toCoupon_GEQ5min', 'toCoupon_GEQ15min', 'toCoupon_GEQ25min', 'direction_same', 'direction_opp', 'destination_Home', 'destination_No Urgent Place', 'destination_Work', 'passenger_Alone', 'passenger_Friend(s)', 'passenger_Kid(s)', 'weather_Rainy', 'weather_Snowy', 'weather_Sunny', 'time_10AM', 'time_10PM', 'time_2PM', 'time_6PM', 'time_7AM', 'coupon_Bar', 'coupon_Carry out & Take away', 'coupon_Coffee House', 'coupon_Restaurant(20-50)', 'coupon_Restaurant(<20)', 'expiration_1d', 'expiration_2h', 'gender_Female', 'gender_Male', 'age_21', 'age_26', 'age_41', 'maritalStatus_Married partner', 'maritalStatus_Single', 'education_Associates degree', 'education_Bachelors degree', 'education_Graduate degree (Masters or Doctorate)', 'occupation_Computer & Mathematical', 'occupation_Legal', 'occupation_Office & Administrative Support', 'occupation_Sales & Related', 'income_$100000 or More', 'income_$12500 - $24999', 'income_$37500 - $49999', 'income_$87500 - $99999', 'car_Car that is too old to install Onstar :D', 'car_Mazda5', 'car_Scooter and motorcycle', 'car_crossover', 'car_do not drive', 'Bar_gt8', 'Bar_less1', 'Bar_never', 'CoffeeHouse_1~3', 'CoffeeHouse_4~8', 'CoffeeHouse_less1', 'CarryAway_1~3', 'CarryAway_4~8', 'RestaurantLessThan20_1~3', 'RestaurantLessThan20_less1', 'Restaurant20To50_1~3', 'Restaurant20To50_less1', 'Restaurant20To50_never', 'label']

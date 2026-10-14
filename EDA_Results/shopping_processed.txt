@@ -1,0 +1,89 @@
+DataFrame for shopping_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 12330 entries, 0 to 12329
+Data columns (total 30 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   Administrative                 12330 non-null  int64  
+ 1   Administrative_Duration        12330 non-null  float64
+ 2   Informational                  12330 non-null  int64  
+ 3   Informational_Duration         12330 non-null  float64
+ 4   ProductRelated                 12330 non-null  int64  
+ 5   ProductRelated_Duration        12330 non-null  float64
+ 6   BounceRates                    12330 non-null  float64
+ 7   ExitRates                      12330 non-null  float64
+ 8   PageValues                     12330 non-null  float64
+ 9   SpecialDay                     12330 non-null  float64
+ 10  OperatingSystems               12330 non-null  int64  
+ 11  Browser                        12330 non-null  int64  
+ 12  Region                         12330 non-null  int64  
+ 13  TrafficType                    12330 non-null  int64  
+ 14  Month_Aug                      12330 non-null  int64  
+ 15  Month_Dec                      12330 non-null  int64  
+ 16  Month_Feb                      12330 non-null  int64  
+ 17  Month_Jul                      12330 non-null  int64  
+ 18  Month_June                     12330 non-null  int64  
+ 19  Month_Mar                      12330 non-null  int64  
+ 20  Month_May                      12330 non-null  int64  
+ 21  Month_Nov                      12330 non-null  int64  
+ 22  Month_Oct                      12330 non-null  int64  
+ 23  Month_Sep                      12330 non-null  int64  
+ 24  VisitorType_New_Visitor        12330 non-null  int64  
+ 25  VisitorType_Other              12330 non-null  int64  
+ 26  VisitorType_Returning_Visitor  12330 non-null  int64  
+ 27  Weekend_False                  12330 non-null  int64  
+ 28  Weekend_True                   12330 non-null  int64  
+ 29  label                          12330 non-null  int64  
+dtypes: float64(7), int64(23)
+memory usage: 2.8 MB
+
+ Statistics: 
+       Administrative  Administrative_Duration  Informational  ...  Weekend_False  Weekend_True         label
+count    12330.000000             12330.000000   12330.000000  ...   12330.000000  12330.000000  12330.000000
+mean         2.315166                80.818611       0.503569  ...       0.767397      0.232603      0.154745
+std          3.321784               176.779107       1.270156  ...       0.422509      0.422509      0.361676
+min          0.000000                 0.000000       0.000000  ...       0.000000      0.000000      0.000000
+25%          0.000000                 0.000000       0.000000  ...       1.000000      0.000000      0.000000
+50%          1.000000                 7.500000       0.000000  ...       1.000000      0.000000      0.000000
+75%          4.000000                93.256250       0.000000  ...       1.000000      0.000000      0.000000
+max         27.000000              3398.750000      24.000000  ...       1.000000      1.000000      1.000000
+
+[8 rows x 30 columns]
+ Number of Null Values: 
+Administrative                   0
+Administrative_Duration          0
+Informational                    0
+Informational_Duration           0
+ProductRelated                   0
+ProductRelated_Duration          0
+BounceRates                      0
+ExitRates                        0
+PageValues                       0
+SpecialDay                       0
+OperatingSystems                 0
+Browser                          0
+Region                           0
+TrafficType                      0
+Month_Aug                        0
+Month_Dec                        0
+Month_Feb                        0
+Month_Jul                        0
+Month_June                       0
+Month_Mar                        0
+Month_May                        0
+Month_Nov                        0
+Month_Oct                        0
+Month_Sep                        0
+VisitorType_New_Visitor          0
+VisitorType_Other                0
+VisitorType_Returning_Visitor    0
+Weekend_False                    0
+Weekend_True                     0
+label                            0
+dtype: int64
+Shape: 
+(12330, 30)
+Columns: 
+['Administrative', 'Administrative_Duration', 'Informational', 'Informational_Duration', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'OperatingSystems', 'Browser', 'Region', 'TrafficType', 'Month_Aug', 'Month_Dec', 'Month_Feb', 'Month_Jul', 'Month_June', 'Month_Mar', 'Month_May', 'Month_Nov', 'Month_Oct', 'Month_Sep', 'VisitorType_New_Visitor', 'VisitorType_Other', 'VisitorType_Returning_Visitor', 'Weekend_False', 'Weekend_True', 'label']

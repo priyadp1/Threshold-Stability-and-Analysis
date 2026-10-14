@@ -1,0 +1,85 @@
+DataFrame for helena_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 65196 entries, 0 to 65195
+Data columns (total 28 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   V1      65196 non-null  float64
+ 1   V2      65196 non-null  float64
+ 2   V3      65196 non-null  float64
+ 3   V4      65196 non-null  float64
+ 4   V5      65196 non-null  float64
+ 5   V6      65196 non-null  float64
+ 6   V7      65196 non-null  float64
+ 7   V8      65196 non-null  float64
+ 8   V9      65196 non-null  float64
+ 9   V10     65196 non-null  float64
+ 10  V11     65196 non-null  float64
+ 11  V12     65196 non-null  float64
+ 12  V13     65196 non-null  float64
+ 13  V14     65196 non-null  float64
+ 14  V15     65196 non-null  float64
+ 15  V16     65196 non-null  float64
+ 16  V17     65196 non-null  float64
+ 17  V18     65196 non-null  float64
+ 18  V19     65196 non-null  float64
+ 19  V20     65196 non-null  float64
+ 20  V21     65196 non-null  float64
+ 21  V22     65196 non-null  float64
+ 22  V23     65196 non-null  float64
+ 23  V24     65196 non-null  float64
+ 24  V25     65196 non-null  float64
+ 25  V26     65196 non-null  float64
+ 26  V27     65196 non-null  float64
+ 27  label   65196 non-null  int64  
+dtypes: float64(27), int64(1)
+memory usage: 13.9 MB
+
+ Statistics: 
+                 V1            V2            V3  ...           V26           V27         label
+count  65196.000000  65196.000000  65196.000000  ...  65196.000000  65196.000000  65196.000000
+mean       0.156803      0.552255      0.398821  ...      0.496187      0.457357      0.061430
+std        0.168239      0.353877      0.242513  ...      1.973637      1.886000      0.240119
+min        0.000313      0.012500      0.014583  ...    -62.310800    -54.067900      0.000000
+25%        0.033455      0.212500      0.203125  ...     -0.315285     -0.228532      0.000000
+50%        0.094606      0.485417      0.350000  ...      0.316076      0.383037      0.000000
+75%        0.227576      1.000000      0.547222  ...      1.146945      1.047948      0.000000
+max        1.000000      1.000000      1.000000  ...     41.442900     83.559900      1.000000
+
+[8 rows x 28 columns]
+ Number of Null Values: 
+V1       0
+V2       0
+V3       0
+V4       0
+V5       0
+V6       0
+V7       0
+V8       0
+V9       0
+V10      0
+V11      0
+V12      0
+V13      0
+V14      0
+V15      0
+V16      0
+V17      0
+V18      0
+V19      0
+V20      0
+V21      0
+V22      0
+V23      0
+V24      0
+V25      0
+V26      0
+V27      0
+label    0
+dtype: int64
+Shape: 
+(65196, 28)
+Columns: 
+['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'label']

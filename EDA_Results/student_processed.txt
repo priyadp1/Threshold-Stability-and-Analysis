@@ -1,0 +1,143 @@
+DataFrame for student_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 649 entries, 0 to 648
+Data columns (total 57 columns):
+ #   Column             Non-Null Count  Dtype
+---  ------             --------------  -----
+ 0   age                649 non-null    int64
+ 1   Medu               649 non-null    int64
+ 2   Fedu               649 non-null    int64
+ 3   traveltime         649 non-null    int64
+ 4   studytime          649 non-null    int64
+ 5   failures           649 non-null    int64
+ 6   famrel             649 non-null    int64
+ 7   freetime           649 non-null    int64
+ 8   goout              649 non-null    int64
+ 9   Dalc               649 non-null    int64
+ 10  Walc               649 non-null    int64
+ 11  health             649 non-null    int64
+ 12  absences           649 non-null    int64
+ 13  school_GP          649 non-null    bool 
+ 14  school_MS          649 non-null    bool 
+ 15  sex_F              649 non-null    bool 
+ 16  sex_M              649 non-null    bool 
+ 17  address_R          649 non-null    bool 
+ 18  address_U          649 non-null    bool 
+ 19  famsize_GT3        649 non-null    bool 
+ 20  famsize_LE3        649 non-null    bool 
+ 21  Pstatus_A          649 non-null    bool 
+ 22  Pstatus_T          649 non-null    bool 
+ 23  Mjob_at_home       649 non-null    bool 
+ 24  Mjob_health        649 non-null    bool 
+ 25  Mjob_other         649 non-null    bool 
+ 26  Mjob_services      649 non-null    bool 
+ 27  Mjob_teacher       649 non-null    bool 
+ 28  Fjob_at_home       649 non-null    bool 
+ 29  Fjob_health        649 non-null    bool 
+ 30  Fjob_other         649 non-null    bool 
+ 31  Fjob_services      649 non-null    bool 
+ 32  Fjob_teacher       649 non-null    bool 
+ 33  reason_course      649 non-null    bool 
+ 34  reason_home        649 non-null    bool 
+ 35  reason_other       649 non-null    bool 
+ 36  reason_reputation  649 non-null    bool 
+ 37  guardian_father    649 non-null    bool 
+ 38  guardian_mother    649 non-null    bool 
+ 39  guardian_other     649 non-null    bool 
+ 40  schoolsup_no       649 non-null    bool 
+ 41  schoolsup_yes      649 non-null    bool 
+ 42  famsup_no          649 non-null    bool 
+ 43  famsup_yes         649 non-null    bool 
+ 44  paid_no            649 non-null    bool 
+ 45  paid_yes           649 non-null    bool 
+ 46  activities_no      649 non-null    bool 
+ 47  activities_yes     649 non-null    bool 
+ 48  nursery_no         649 non-null    bool 
+ 49  nursery_yes        649 non-null    bool 
+ 50  higher_no          649 non-null    bool 
+ 51  higher_yes         649 non-null    bool 
+ 52  internet_no        649 non-null    bool 
+ 53  internet_yes       649 non-null    bool 
+ 54  romantic_no        649 non-null    bool 
+ 55  romantic_yes       649 non-null    bool 
+ 56  label              649 non-null    int64
+dtypes: bool(43), int64(14)
+memory usage: 98.4 KB
+
+ Statistics: 
+              age        Medu        Fedu  traveltime  ...        Walc      health    absences       label
+count  649.000000  649.000000  649.000000  649.000000  ...  649.000000  649.000000  649.000000  649.000000
+mean    16.744222    2.514638    2.306626    1.568567  ...    2.280431    3.536210    3.659476    0.758089
+std      1.218138    1.134552    1.099931    0.748660  ...    1.284380    1.446259    4.640759    0.428571
+min     15.000000    0.000000    0.000000    1.000000  ...    1.000000    1.000000    0.000000    0.000000
+25%     16.000000    2.000000    1.000000    1.000000  ...    1.000000    2.000000    0.000000    1.000000
+50%     17.000000    2.000000    2.000000    1.000000  ...    2.000000    4.000000    2.000000    1.000000
+75%     18.000000    4.000000    3.000000    2.000000  ...    3.000000    5.000000    6.000000    1.000000
+max     22.000000    4.000000    4.000000    4.000000  ...    5.000000    5.000000   32.000000    1.000000
+
+[8 rows x 14 columns]
+ Number of Null Values: 
+age                  0
+Medu                 0
+Fedu                 0
+traveltime           0
+studytime            0
+failures             0
+famrel               0
+freetime             0
+goout                0
+Dalc                 0
+Walc                 0
+health               0
+absences             0
+school_GP            0
+school_MS            0
+sex_F                0
+sex_M                0
+address_R            0
+address_U            0
+famsize_GT3          0
+famsize_LE3          0
+Pstatus_A            0
+Pstatus_T            0
+Mjob_at_home         0
+Mjob_health          0
+Mjob_other           0
+Mjob_services        0
+Mjob_teacher         0
+Fjob_at_home         0
+Fjob_health          0
+Fjob_other           0
+Fjob_services        0
+Fjob_teacher         0
+reason_course        0
+reason_home          0
+reason_other         0
+reason_reputation    0
+guardian_father      0
+guardian_mother      0
+guardian_other       0
+schoolsup_no         0
+schoolsup_yes        0
+famsup_no            0
+famsup_yes           0
+paid_no              0
+paid_yes             0
+activities_no        0
+activities_yes       0
+nursery_no           0
+nursery_yes          0
+higher_no            0
+higher_yes           0
+internet_no          0
+internet_yes         0
+romantic_no          0
+romantic_yes         0
+label                0
+dtype: int64
+Shape: 
+(649, 57)
+Columns: 
+['age', 'Medu', 'Fedu', 'traveltime', 'studytime', 'failures', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'school_GP', 'school_MS', 'sex_F', 'sex_M', 'address_R', 'address_U', 'famsize_GT3', 'famsize_LE3', 'Pstatus_A', 'Pstatus_T', 'Mjob_at_home', 'Mjob_health', 'Mjob_other', 'Mjob_services', 'Mjob_teacher', 'Fjob_at_home', 'Fjob_health', 'Fjob_other', 'Fjob_services', 'Fjob_teacher', 'reason_course', 'reason_home', 'reason_other', 'reason_reputation', 'guardian_father', 'guardian_mother', 'guardian_other', 'schoolsup_no', 'schoolsup_yes', 'famsup_no', 'famsup_yes', 'paid_no', 'paid_yes', 'activities_no', 'activities_yes', 'nursery_no', 'nursery_yes', 'higher_no', 'higher_yes', 'internet_no', 'internet_yes', 'romantic_no', 'romantic_yes', 'label']

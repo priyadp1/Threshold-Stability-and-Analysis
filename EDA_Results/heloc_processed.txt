@@ -1,0 +1,109 @@
+DataFrame for heloc_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2502 entries, 0 to 2501
+Data columns (total 40 columns):
+ #   Column                              Non-Null Count  Dtype  
+---  ------                              --------------  -----  
+ 0   ExternalRiskEstimate                2502 non-null   float64
+ 1   MSinceOldestTradeOpen               2502 non-null   float64
+ 2   MSinceMostRecentTradeOpen           2502 non-null   int64  
+ 3   AverageMInFile                      2502 non-null   int64  
+ 4   NumSatisfactoryTrades               2502 non-null   int64  
+ 5   NumTrades60Ever2DerogPubRec         2502 non-null   int64  
+ 6   NumTrades90Ever2DerogPubRec         2502 non-null   int64  
+ 7   PercentTradesNeverDelq              2502 non-null   int64  
+ 8   MSinceMostRecentDelq                2502 non-null   float64
+ 9   NumTotalTrades                      2502 non-null   int64  
+ 10  NumTradesOpeninLast12M              2502 non-null   int64  
+ 11  PercentInstallTrades                2502 non-null   int64  
+ 12  MSinceMostRecentInqexcl7days        2502 non-null   float64
+ 13  NumInqLast6M                        2502 non-null   int64  
+ 14  NumInqLast6Mexcl7days               2502 non-null   int64  
+ 15  NetFractionRevolvingBurden          2502 non-null   float64
+ 16  NetFractionInstallBurden            2502 non-null   float64
+ 17  NumRevolvingTradesWBalance          2502 non-null   float64
+ 18  NumInstallTradesWBalance            2502 non-null   float64
+ 19  NumBank2NatlTradesWHighUtilization  2502 non-null   float64
+ 20  PercentTradesWBalance               2502 non-null   float64
+ 21  MaxDelq2PublicRecLast12M_-9         2502 non-null   bool   
+ 22  MaxDelq2PublicRecLast12M_0          2502 non-null   bool   
+ 23  MaxDelq2PublicRecLast12M_1          2502 non-null   bool   
+ 24  MaxDelq2PublicRecLast12M_2          2502 non-null   bool   
+ 25  MaxDelq2PublicRecLast12M_3          2502 non-null   bool   
+ 26  MaxDelq2PublicRecLast12M_4          2502 non-null   bool   
+ 27  MaxDelq2PublicRecLast12M_5          2502 non-null   bool   
+ 28  MaxDelq2PublicRecLast12M_6          2502 non-null   bool   
+ 29  MaxDelq2PublicRecLast12M_7          2502 non-null   bool   
+ 30  MaxDelq2PublicRecLast12M_9          2502 non-null   bool   
+ 31  MaxDelqEver_-9                      2502 non-null   bool   
+ 32  MaxDelqEver_2                       2502 non-null   bool   
+ 33  MaxDelqEver_3                       2502 non-null   bool   
+ 34  MaxDelqEver_4                       2502 non-null   bool   
+ 35  MaxDelqEver_5                       2502 non-null   bool   
+ 36  MaxDelqEver_6                       2502 non-null   bool   
+ 37  MaxDelqEver_7                       2502 non-null   bool   
+ 38  MaxDelqEver_8                       2502 non-null   bool   
+ 39  label                               2502 non-null   int64  
+dtypes: bool(18), float64(10), int64(12)
+memory usage: 474.1 KB
+
+ Statistics: 
+       ExternalRiskEstimate  MSinceOldestTradeOpen  ...  PercentTradesWBalance        label
+count            2502.00000            2502.000000  ...            2502.000000  2502.000000
+mean               66.29976             204.900480  ...              70.717426     0.623501
+std                 7.83142              91.778897  ...              18.773820     0.484604
+min                36.00000              21.000000  ...              10.000000     0.000000
+25%                61.00000             140.000000  ...              57.000000     0.000000
+50%                66.00000             189.000000  ...              71.000000     1.000000
+75%                72.00000             261.000000  ...              85.000000     1.000000
+max                89.00000             604.000000  ...             100.000000     1.000000
+
+[8 rows x 22 columns]
+ Number of Null Values: 
+ExternalRiskEstimate                  0
+MSinceOldestTradeOpen                 0
+MSinceMostRecentTradeOpen             0
+AverageMInFile                        0
+NumSatisfactoryTrades                 0
+NumTrades60Ever2DerogPubRec           0
+NumTrades90Ever2DerogPubRec           0
+PercentTradesNeverDelq                0
+MSinceMostRecentDelq                  0
+NumTotalTrades                        0
+NumTradesOpeninLast12M                0
+PercentInstallTrades                  0
+MSinceMostRecentInqexcl7days          0
+NumInqLast6M                          0
+NumInqLast6Mexcl7days                 0
+NetFractionRevolvingBurden            0
+NetFractionInstallBurden              0
+NumRevolvingTradesWBalance            0
+NumInstallTradesWBalance              0
+NumBank2NatlTradesWHighUtilization    0
+PercentTradesWBalance                 0
+MaxDelq2PublicRecLast12M_-9           0
+MaxDelq2PublicRecLast12M_0            0
+MaxDelq2PublicRecLast12M_1            0
+MaxDelq2PublicRecLast12M_2            0
+MaxDelq2PublicRecLast12M_3            0
+MaxDelq2PublicRecLast12M_4            0
+MaxDelq2PublicRecLast12M_5            0
+MaxDelq2PublicRecLast12M_6            0
+MaxDelq2PublicRecLast12M_7            0
+MaxDelq2PublicRecLast12M_9            0
+MaxDelqEver_-9                        0
+MaxDelqEver_2                         0
+MaxDelqEver_3                         0
+MaxDelqEver_4                         0
+MaxDelqEver_5                         0
+MaxDelqEver_6                         0
+MaxDelqEver_7                         0
+MaxDelqEver_8                         0
+label                                 0
+dtype: int64
+Shape: 
+(2502, 40)
+Columns: 
+['ExternalRiskEstimate', 'MSinceOldestTradeOpen', 'MSinceMostRecentTradeOpen', 'AverageMInFile', 'NumSatisfactoryTrades', 'NumTrades60Ever2DerogPubRec', 'NumTrades90Ever2DerogPubRec', 'PercentTradesNeverDelq', 'MSinceMostRecentDelq', 'NumTotalTrades', 'NumTradesOpeninLast12M', 'PercentInstallTrades', 'MSinceMostRecentInqexcl7days', 'NumInqLast6M', 'NumInqLast6Mexcl7days', 'NetFractionRevolvingBurden', 'NetFractionInstallBurden', 'NumRevolvingTradesWBalance', 'NumInstallTradesWBalance', 'NumBank2NatlTradesWHighUtilization', 'PercentTradesWBalance', 'MaxDelq2PublicRecLast12M_-9', 'MaxDelq2PublicRecLast12M_0', 'MaxDelq2PublicRecLast12M_1', 'MaxDelq2PublicRecLast12M_2', 'MaxDelq2PublicRecLast12M_3', 'MaxDelq2PublicRecLast12M_4', 'MaxDelq2PublicRecLast12M_5', 'MaxDelq2PublicRecLast12M_6', 'MaxDelq2PublicRecLast12M_7', 'MaxDelq2PublicRecLast12M_9', 'MaxDelqEver_-9', 'MaxDelqEver_2', 'MaxDelqEver_3', 'MaxDelqEver_4', 'MaxDelqEver_5', 'MaxDelqEver_6', 'MaxDelqEver_7', 'MaxDelqEver_8', 'label']

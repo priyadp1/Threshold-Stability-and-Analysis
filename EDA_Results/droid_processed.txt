@@ -1,0 +1,127 @@
+DataFrame for droid_processed.csv:
+
+Information: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 29332 entries, 0 to 29331
+Data columns (total 87 columns):
+ #   Column                                                                         Non-Null Count  Dtype
+---  ------                                                                         --------------  -----
+ 0   android.permission.GET_ACCOUNTS                                                29332 non-null  int64
+ 1   com.sonyericsson.home.permission.BROADCAST_BADGE                               29332 non-null  int64
+ 2   android.permission.READ_PROFILE                                                29332 non-null  int64
+ 3   android.permission.MANAGE_ACCOUNTS                                             29332 non-null  int64
+ 4   android.permission.WRITE_SYNC_SETTINGS                                         29332 non-null  int64
+ 5   android.permission.READ_EXTERNAL_STORAGE                                       29332 non-null  int64
+ 6   android.permission.RECEIVE_SMS                                                 29332 non-null  int64
+ 7   com.android.launcher.permission.READ_SETTINGS                                  29332 non-null  int64
+ 8   android.permission.WRITE_SETTINGS                                              29332 non-null  int64
+ 9   com.google.android.providers.gsf.permission.READ_GSERVICES                     29332 non-null  int64
+ 10  android.permission.DOWNLOAD_WITHOUT_NOTIFICATION                               29332 non-null  int64
+ 11  android.permission.GET_TASKS                                                   29332 non-null  int64
+ 12  android.permission.WRITE_EXTERNAL_STORAGE                                      29332 non-null  int64
+ 13  android.permission.RECORD_AUDIO                                                29332 non-null  int64
+ 14  com.huawei.android.launcher.permission.CHANGE_BADGE                            29332 non-null  int64
+ 15  com.oppo.launcher.permission.READ_SETTINGS                                     29332 non-null  int64
+ 16  android.permission.CHANGE_NETWORK_STATE                                        29332 non-null  int64
+ 17  com.android.launcher.permission.INSTALL_SHORTCUT                               29332 non-null  int64
+ 18  android.permission.android.permission.READ_PHONE_STATE                         29332 non-null  int64
+ 19  android.permission.CALL_PHONE                                                  29332 non-null  int64
+ 20  android.permission.WRITE_CONTACTS                                              29332 non-null  int64
+ 21  android.permission.READ_PHONE_STATE                                            29332 non-null  int64
+ 22  com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY  29332 non-null  int64
+ 23  android.permission.MODIFY_AUDIO_SETTINGS                                       29332 non-null  int64
+ 24  android.permission.ACCESS_LOCATION_EXTRA_COMMANDS                              29332 non-null  int64
+ 25  android.permission.INTERNET                                                    29332 non-null  int64
+ 26  android.permission.MOUNT_UNMOUNT_FILESYSTEMS                                   29332 non-null  int64
+ 27  com.majeur.launcher.permission.UPDATE_BADGE                                    29332 non-null  int64
+ 28  android.permission.AUTHENTICATE_ACCOUNTS                                       29332 non-null  int64
+ 29  com.htc.launcher.permission.READ_SETTINGS                                      29332 non-null  int64
+ 30  android.permission.ACCESS_WIFI_STATE                                           29332 non-null  int64
+ 31  android.permission.FLASHLIGHT                                                  29332 non-null  int64
+ 32  android.permission.READ_APP_BADGE                                              29332 non-null  int64
+ 33  android.permission.USE_CREDENTIALS                                             29332 non-null  int64
+ 34  android.permission.CHANGE_CONFIGURATION                                        29332 non-null  int64
+ 35  android.permission.READ_SYNC_SETTINGS                                          29332 non-null  int64
+ 36  android.permission.BROADCAST_STICKY                                            29332 non-null  int64
+ 37  com.anddoes.launcher.permission.UPDATE_COUNT                                   29332 non-null  int64
+ 38  com.android.alarm.permission.SET_ALARM                                         29332 non-null  int64
+ 39  com.google.android.c2dm.permission.RECEIVE                                     29332 non-null  int64
+ 40  android.permission.KILL_BACKGROUND_PROCESSES                                   29332 non-null  int64
+ 41  com.sonymobile.home.permission.PROVIDER_INSERT_BADGE                           29332 non-null  int64
+ 42  com.sec.android.provider.badge.permission.READ                                 29332 non-null  int64
+ 43  android.permission.WRITE_CALENDAR                                              29332 non-null  int64
+ 44  android.permission.SEND_SMS                                                    29332 non-null  int64
+ 45  com.huawei.android.launcher.permission.WRITE_SETTINGS                          29332 non-null  int64
+ 46  android.permission.REQUEST_INSTALL_PACKAGES                                    29332 non-null  int64
+ 47  android.permission.SET_WALLPAPER_HINTS                                         29332 non-null  int64
+ 48  android.permission.SET_WALLPAPER                                               29332 non-null  int64
+ 49  com.oppo.launcher.permission.WRITE_SETTINGS                                    29332 non-null  int64
+ 50  android.permission.RESTART_PACKAGES                                            29332 non-null  int64
+ 51  me.everything.badger.permission.BADGE_COUNT_WRITE                              29332 non-null  int64
+ 52  android.permission.ACCESS_MOCK_LOCATION                                        29332 non-null  int64
+ 53  android.permission.ACCESS_COARSE_LOCATION                                      29332 non-null  int64
+ 54  android.permission.READ_LOGS                                                   29332 non-null  int64
+ 55  com.google.android.gms.permission.ACTIVITY_RECOGNITION                         29332 non-null  int64
+ 56  com.amazon.device.messaging.permission.RECEIVE                                 29332 non-null  int64
+ 57  android.permission.SYSTEM_ALERT_WINDOW                                         29332 non-null  int64
+ 58  android.permission.DISABLE_KEYGUARD                                            29332 non-null  int64
+ 59  android.permission.USE_FINGERPRINT                                             29332 non-null  int64
+ 60  me.everything.badger.permission.BADGE_COUNT_READ                               29332 non-null  int64
+ 61  android.permission.CHANGE_WIFI_STATE                                           29332 non-null  int64
+ 62  android.permission.READ_CONTACTS                                               29332 non-null  int64
+ 63  com.android.vending.BILLING                                                    29332 non-null  int64
+ 64  android.permission.READ_CALENDAR                                               29332 non-null  int64
+ 65  android.permission.RECEIVE_BOOT_COMPLETED                                      29332 non-null  int64
+ 66  android.permission.WAKE_LOCK                                                   29332 non-null  int64
+ 67  android.permission.ACCESS_FINE_LOCATION                                        29332 non-null  int64
+ 68  android.permission.BLUETOOTH                                                   29332 non-null  int64
+ 69  android.permission.CAMERA                                                      29332 non-null  int64
+ 70  com.android.vending.CHECK_LICENSE                                              29332 non-null  int64
+ 71  android.permission.FOREGROUND_SERVICE                                          29332 non-null  int64
+ 72  android.permission.BLUETOOTH_ADMIN                                             29332 non-null  int64
+ 73  android.permission.VIBRATE                                                     29332 non-null  int64
+ 74  android.permission.NFC                                                         29332 non-null  int64
+ 75  android.permission.RECEIVE_USER_PRESENT                                        29332 non-null  int64
+ 76  android.permission.CLEAR_APP_CACHE                                             29332 non-null  int64
+ 77  com.android.launcher.permission.UNINSTALL_SHORTCUT                             29332 non-null  int64
+ 78  com.sec.android.iap.permission.BILLING                                         29332 non-null  int64
+ 79  com.htc.launcher.permission.UPDATE_SHORTCUT                                    29332 non-null  int64
+ 80  com.sec.android.provider.badge.permission.WRITE                                29332 non-null  int64
+ 81  android.permission.ACCESS_NETWORK_STATE                                        29332 non-null  int64
+ 82  com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE         29332 non-null  int64
+ 83  com.huawei.android.launcher.permission.READ_SETTINGS                           29332 non-null  int64
+ 84  android.permission.READ_SMS                                                    29332 non-null  int64
+ 85  android.permission.PROCESS_INCOMING_CALLS                                      29332 non-null  int64
+ 86  label                                                                          29332 non-null  int64
+dtypes: int64(87)
+memory usage: 19.5 MB
+
+ Statistics: 
+       android.permission.GET_ACCOUNTS  ...         label
+count                     29332.000000  ...  29332.000000
+mean                          0.226033  ...      0.501159
+std                           0.418268  ...      0.500007
+min                           0.000000  ...      0.000000
+25%                           0.000000  ...      0.000000
+50%                           0.000000  ...      1.000000
+75%                           0.000000  ...      1.000000
+max                           1.000000  ...      1.000000
+
+[8 rows x 87 columns]
+ Number of Null Values: 
+android.permission.GET_ACCOUNTS                                           0
+com.sonyericsson.home.permission.BROADCAST_BADGE                          0
+android.permission.READ_PROFILE                                           0
+android.permission.MANAGE_ACCOUNTS                                        0
+android.permission.WRITE_SYNC_SETTINGS                                    0
+                                                                         ..
+com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE    0
+com.huawei.android.launcher.permission.READ_SETTINGS                      0
+android.permission.READ_SMS                                               0
+android.permission.PROCESS_INCOMING_CALLS                                 0
+label                                                                     0
+Length: 87, dtype: int64
+Shape: 
+(29332, 87)
+Columns: 
+['android.permission.GET_ACCOUNTS', 'com.sonyericsson.home.permission.BROADCAST_BADGE', 'android.permission.READ_PROFILE', 'android.permission.MANAGE_ACCOUNTS', 'android.permission.WRITE_SYNC_SETTINGS', 'android.permission.READ_EXTERNAL_STORAGE', 'android.permission.RECEIVE_SMS', 'com.android.launcher.permission.READ_SETTINGS', 'android.permission.WRITE_SETTINGS', 'com.google.android.providers.gsf.permission.READ_GSERVICES', 'android.permission.DOWNLOAD_WITHOUT_NOTIFICATION', 'android.permission.GET_TASKS', 'android.permission.WRITE_EXTERNAL_STORAGE', 'android.permission.RECORD_AUDIO', 'com.huawei.android.launcher.permission.CHANGE_BADGE', 'com.oppo.launcher.permission.READ_SETTINGS', 'android.permission.CHANGE_NETWORK_STATE', 'com.android.launcher.permission.INSTALL_SHORTCUT', 'android.permission.android.permission.READ_PHONE_STATE', 'android.permission.CALL_PHONE', 'android.permission.WRITE_CONTACTS', 'android.permission.READ_PHONE_STATE', 'com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY', 'android.permission.MODIFY_AUDIO_SETTINGS', 'android.permission.ACCESS_LOCATION_EXTRA_COMMANDS', 'android.permission.INTERNET', 'android.permission.MOUNT_UNMOUNT_FILESYSTEMS', 'com.majeur.launcher.permission.UPDATE_BADGE', 'android.permission.AUTHENTICATE_ACCOUNTS', 'com.htc.launcher.permission.READ_SETTINGS', 'android.permission.ACCESS_WIFI_STATE', 'android.permission.FLASHLIGHT', 'android.permission.READ_APP_BADGE', 'android.permission.USE_CREDENTIALS', 'android.permission.CHANGE_CONFIGURATION', 'android.permission.READ_SYNC_SETTINGS', 'android.permission.BROADCAST_STICKY', 'com.anddoes.launcher.permission.UPDATE_COUNT', 'com.android.alarm.permission.SET_ALARM', 'com.google.android.c2dm.permission.RECEIVE', 'android.permission.KILL_BACKGROUND_PROCESSES', 'com.sonymobile.home.permission.PROVIDER_INSERT_BADGE', 'com.sec.android.provider.badge.permission.READ', 'android.permission.WRITE_CALENDAR', 'android.permission.SEND_SMS', 'com.huawei.android.launcher.permission.WRITE_SETTINGS', 'android.permission.REQUEST_INSTALL_PACKAGES', 'android.permission.SET_WALLPAPER_HINTS', 'android.permission.SET_WALLPAPER', 'com.oppo.launcher.permission.WRITE_SETTINGS', 'android.permission.RESTART_PACKAGES', 'me.everything.badger.permission.BADGE_COUNT_WRITE', 'android.permission.ACCESS_MOCK_LOCATION', 'android.permission.ACCESS_COARSE_LOCATION', 'android.permission.READ_LOGS', 'com.google.android.gms.permission.ACTIVITY_RECOGNITION', 'com.amazon.device.messaging.permission.RECEIVE', 'android.permission.SYSTEM_ALERT_WINDOW', 'android.permission.DISABLE_KEYGUARD', 'android.permission.USE_FINGERPRINT', 'me.everything.badger.permission.BADGE_COUNT_READ', 'android.permission.CHANGE_WIFI_STATE', 'android.permission.READ_CONTACTS', 'com.android.vending.BILLING', 'android.permission.READ_CALENDAR', 'android.permission.RECEIVE_BOOT_COMPLETED', 'android.permission.WAKE_LOCK', 'android.permission.ACCESS_FINE_LOCATION', 'android.permission.BLUETOOTH', 'android.permission.CAMERA', 'com.android.vending.CHECK_LICENSE', 'android.permission.FOREGROUND_SERVICE', 'android.permission.BLUETOOTH_ADMIN', 'android.permission.VIBRATE', 'android.permission.NFC', 'android.permission.RECEIVE_USER_PRESENT', 'android.permission.CLEAR_APP_CACHE', 'com.android.launcher.permission.UNINSTALL_SHORTCUT', 'com.sec.android.iap.permission.BILLING', 'com.htc.launcher.permission.UPDATE_SHORTCUT', 'com.sec.android.provider.badge.permission.WRITE', 'android.permission.ACCESS_NETWORK_STATE', 'com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE', 'com.huawei.android.launcher.permission.READ_SETTINGS', 'android.permission.READ_SMS', 'android.permission.PROCESS_INCOMING_CALLS', 'label']
