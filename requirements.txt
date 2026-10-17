@@ -1,1 +1,6 @@
 arborenum
+pandas
+numpy
+pathlib
+matplotlib
+scikit-learn
