@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from arborenum import ArborEnum
+from arborenum_bounds import capture_native_stdout, parse_bounds
 import random
 
 MAX_TREE_SAMPLE = 1000
@@ -299,7 +300,50 @@ def export_arborenum_feature_mapping(model, out_dir):
     return output
 
 
-def save_interval_inputs(model, X_train, y_train, sampled_tree_indices, n_trees, out_dir):
+def fit_model(X_train, y_train):
+    # Capture ArborEnum's C++ log so the Rashomon cutoff it actually used can be saved
+    model = ArborEnum()
+    with capture_native_stdout() as log:
+        model.fit(
+            X_train,
+            y_train,
+            proxy_mode = "hybrid",
+            lambda_reg = LAMBDA_REG,
+            depth_budget = DEPTH_BUDGET,
+            rashomon_mult= RASHOMON_MULT,
+            lookahead_k = LOOKAHEAD_K,
+            max_number_thresholds_per_feature=None,
+            key_mode="hash"
+        )
+    return model, parse_bounds(log["text"])
+
+
+def backfill_bounds(out_dir):
+    # Older runs did not save the cutoff; refit on the saved training data and patch it in
+    interval_dir = out_dir / "interval_inputs"
+    with open(interval_dir / "interval_inputs.json") as f:
+        payload = json.load(f)
+    if payload.get("arborenum_bounds", {}).get("objective_bound") is not None:
+        return
+
+    print(f"  [ARBORENUM] Backfilling Rashomon cutoff for {out_dir.name}...")
+    X_train = pd.read_csv(interval_dir / "X_train.csv")
+    y_train = pd.read_csv(interval_dir / "y_train.csv").iloc[:, 0]
+    model, bounds = fit_model(X_train, y_train)
+
+    n_trees = model.count_trees()
+    if n_trees != payload["n_total_trees"]:
+        print(f"  [ARBORENUM] Refit found {n_trees} trees, expected {payload['n_total_trees']}; "
+              "cutoff not saved.")
+        return
+
+    payload["arborenum_bounds"] = bounds
+    with open(interval_dir / "interval_inputs.json", "w") as f:
+        json.dump(payload, f, indent=2)
+    print(f"  [ARBORENUM] Saved objective bound {bounds['objective_bound']}.")
+
+
+def save_interval_inputs(model, X_train, y_train, sampled_tree_indices, n_trees, out_dir, bounds):
     interval_dir = out_dir / "interval_inputs"
     interval_dir.mkdir(parents=True, exist_ok=True)
 
@@ -338,6 +382,8 @@ def save_interval_inputs(model, X_train, y_train, sampled_tree_indices, n_trees,
             "max_tree_sample": MAX_TREE_SAMPLE,
             "random_seed": RANDOM_SEED,
         },
+        # Cutoff ArborEnum used: trees in the set have objective <= objective_bound
+        "arborenum_bounds": bounds,
         "trees": exported_trees,
     }
 
@@ -363,25 +409,14 @@ def run_dataset(dataset_name, cfg):
     ]
     if all((out_dir / f).exists() for f in _expected_outputs):
         print(f"  [ARBORENUM] Skipping {dataset_name} — results already exist.")
+        backfill_bounds(out_dir)
         return
 
     X_train, X_test, y_train, y_test = load_dataset(cfg)
 
-    model = ArborEnum()
-
     print(f"  [ARBORENUM] Training on {dataset_name}...")
     start = time.perf_counter()
-    model.fit(
-        X_train,
-        y_train,
-        proxy_mode = "hybrid",
-        lambda_reg = LAMBDA_REG,
-        depth_budget = DEPTH_BUDGET,
-        rashomon_mult= RASHOMON_MULT,
-        lookahead_k = LOOKAHEAD_K,
-        max_number_thresholds_per_feature=None,
-        key_mode="hash"
-    )
+    model, bounds = fit_model(X_train, y_train)
     duration = time.perf_counter() - start
 
     export_arborenum_feature_mapping(model, out_dir)
@@ -446,6 +481,7 @@ def run_dataset(dataset_name, cfg):
         sampled_tree_indices=sampled_tree_indices,
         n_trees=n_trees,
         out_dir=out_dir,
+        bounds=bounds,
     )
 
     with open(out_dir / "arborenum_first_tree.txt", "w", encoding="utf-8") as fh:
@@ -521,6 +557,9 @@ def run_dataset(dataset_name, cfg):
         f.write(f"\nClassification Report:\n{classification_report(y_test, test_preds)}")
         f.write(f"\nARBORENUM completed in {duration:.2f} seconds")
         f.write(f"\nRashomon set size: {n_trees}")
+        f.write(f"\nObjective bound: {bounds['objective_bound']} "
+                f"(reference objective {bounds['reference_objective']}, "
+                f"minimum objective {bounds['min_objective']})")
         if "error" not in tree_size:
             f.write(f"\nTree Size (tree 0): {tree_size['n_leaves']} leaves, {tree_size['n_nodes']} total nodes")
         else:

@@ -218,12 +218,16 @@ def run(args):
     best = min(objectives.values())
     # Matches ArborEnum's rashomon_budget_: llround(reference * (1 + rashomon_mult)), kept iff obj <= bound.
     # ArborEnum's reference is its proxy objective; with a complete export it should equal the best exported tree.
-    theta = float(math.floor((1 + eps) * best + 0.5))
+    theta, theta_source = float(math.floor((1 + eps) * best + 0.5)), 'inferred'
+    saved_bound = source.get('arborenum_bounds', {}).get('objective_bound')
     if args.theta is not None:
-        theta = args.theta
+        theta, theta_source = float(args.theta), 'override'
+    elif saved_bound is not None:
+        theta, theta_source = float(saved_bound), 'arborenum'
     # Exact full export required for inferring theta from the best exported tree.
-    if not source.get('complete_enumeration_export', False) and args.theta is None:
-        raise ValueError('Partial enumeration: set THETA_OVERRIDES using ArborEnum global optimum')
+    elif not source.get('complete_enumeration_export', False):
+        raise ValueError('Partial enumeration and no saved ArborEnum bound: re-run the ArborEnum '
+                         'script to backfill it, or set THETA_OVERRIDES')
     outside = [i for i, v in objectives.items() if v > theta + 1e-8]
     if outside:
         raise ValueError(f'{len(outside)} exported trees exceed inferred cutoff {theta:.6g}. '
@@ -292,6 +296,7 @@ def run(args):
                         'covered_trees': len(coverage), 'coverage_fraction': len(coverage)/len(records),
                         'all_boxes_certified': True, 'runtime_seconds': round(elapsed, 5),
                         'gamma': gamma, 'best_exported_objective': best, 'theta': theta,
+                        'theta_source': theta_source,
                         'complete_export': source.get('complete_enumeration_export', False)})
         (out / f'interval_trees_{method}.json').write_text(json.dumps({'metadata': summary[-1], 'boxes': boxes}, indent=2))
         print(f'{method:8s} {len(boxes):4d} interval trees | {len(records)/len(boxes):.3f}x | {elapsed:.2f}s | coverage {len(coverage)}/{len(records)}')
@@ -330,7 +335,7 @@ def describe_tree(sig, bounds_iter, grids, columns):
 
 RESULTS_ROOT = Path(__file__).resolve().parent / 'standard_arborenum_results'
 METHODS = ['band', 'profile', 'exact']
-THETA_OVERRIDES = {}
+THETA_OVERRIDES = {'monk2': 124.0, 'student': 100.0}
 
 
 def main():
