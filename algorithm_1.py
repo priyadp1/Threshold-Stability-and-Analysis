@@ -304,6 +304,7 @@ def run(args):
         writer = csv.DictWriter(f, fieldnames=list(summary[0])); writer.writeheader(); writer.writerows(summary)
     (out / 'algorithm1_summary.json').write_text(json.dumps(summary, indent=2))
     print('Saved results to', out)
+    return summary
 
 
 def collect_features(sig):
@@ -339,6 +340,7 @@ THETA_OVERRIDES = {'monk2': 124.0, 'student': 100.0}
 
 
 def main():
+    all_rows = []
     for dataset_dir in sorted(p for p in RESULTS_ROOT.iterdir() if p.is_dir()):
         name = dataset_dir.name
         inputs = dataset_dir / 'interval_inputs'
@@ -358,9 +360,14 @@ def main():
             continue
         print(f'[{name}] running Algorithm 1')
         try:
-            run(args)
+            all_rows.extend(run(args))
         except Exception as e:
             print(f'[{name}] failed: {e}')
+    if all_rows:
+        combined = RESULTS_ROOT / 'algorithm1_all_results.csv'
+        with combined.open('w', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=list(all_rows[0])); writer.writeheader(); writer.writerows(all_rows)
+        print('Saved combined results to', combined)
 
 
 if __name__ == '__main__':
