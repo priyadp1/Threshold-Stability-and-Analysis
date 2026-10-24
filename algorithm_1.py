@@ -224,13 +224,17 @@ def run(args):
         theta, theta_source = float(args.theta), 'override'
     elif saved_bound is not None:
         theta, theta_source = float(saved_bound), 'arborenum'
+    # Anytime mode budgets off a proxy root objective it never logs, so (1+eps)*best underestimates it.
+    # Max exported objective <= the true cutoff, so boxes certified against it stay in the Rashomon set.
+    elif getattr(args, 'theta_from_max_exported', False):
+        theta, theta_source = float(max(objectives.values())), 'max_exported'
     # Exact full export required for inferring theta from the best exported tree.
     elif not source.get('complete_enumeration_export', False):
         raise ValueError('Partial enumeration and no saved ArborEnum bound: re-run the ArborEnum '
                          'script to backfill it, or set THETA_OVERRIDES')
     outside = [i for i, v in objectives.items() if v > theta + 1e-8]
     if outside:
-        raise ValueError(f'{len(outside)} exported trees exceed inferred cutoff {theta:.6g}. '
+        raise ValueError(f'{len(outside)} exported trees exceed {theta_source} cutoff {theta:.6g}. '
                          'Check Rashomon parameter convention / gamma rounding or set THETA_OVERRIDES.')
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -334,14 +338,23 @@ def describe_tree(sig, bounds_iter, grids, columns):
     return node
 
 
-RESULTS_ROOT = Path(__file__).resolve().parent / 'standard_arborenum_results'
+STANDARD_RESULTS_ROOT = Path(__file__).resolve().parent / 'standard_arborenum_results'
+ANYTIME_RESULTS_ROOT = Path(__file__).resolve().parent / 'anytime_arborenum_results'
 METHODS = ['band', 'profile', 'exact']
-THETA_OVERRIDES = {'monk2': 124.0, 'student': 100.0}
+# Per-root theta overrides: the two runs use different lambda/Rashomon settings, so cutoffs are not shared.
+# Last field: fall back to the max exported objective when no ArborEnum bound was saved (anytime only).
+RESULTS_ROOTS = {
+    'standard': (STANDARD_RESULTS_ROOT, {}, False),
+    'anytime': (ANYTIME_RESULTS_ROOT, {}, True),
+}
 
 
-def main():
+def run_root(label, root, theta_overrides, theta_from_max_exported):
+    if not root.is_dir():
+        print(f'[{label}] skipping, {root} does not exist')
+        return
     all_rows = []
-    for dataset_dir in sorted(p for p in RESULTS_ROOT.iterdir() if p.is_dir()):
+    for dataset_dir in sorted(p for p in root.iterdir() if p.is_dir()):
         name = dataset_dir.name
         inputs = dataset_dir / 'interval_inputs'
         args = SimpleNamespace(
@@ -351,23 +364,29 @@ def main():
             mapping=dataset_dir / 'arborenum_feature_mapping.json',
             out=dataset_dir / 'algorithm1_results',
             dataset=name,
-            theta=THETA_OVERRIDES.get(name),
+            theta=theta_overrides.get(name),
+            theta_from_max_exported=theta_from_max_exported,
             methods=METHODS,
         )
-        missing = [str(f.relative_to(RESULTS_ROOT)) for f in (args.trees, args.X, args.y, args.mapping) if not f.exists()]
+        missing = [str(f.relative_to(root)) for f in (args.trees, args.X, args.y, args.mapping) if not f.exists()]
         if missing:
-            print(f'[{name}] skipping, missing: {", ".join(missing)}')
+            print(f'[{label}/{name}] skipping, missing: {", ".join(missing)}')
             continue
-        print(f'[{name}] running Algorithm 1')
+        print(f'[{label}/{name}] running Algorithm 1')
         try:
-            all_rows.extend(run(args))
+            all_rows.extend({'run': label, **row} for row in run(args))
         except Exception as e:
-            print(f'[{name}] failed: {e}')
+            print(f'[{label}/{name}] failed: {e}')
     if all_rows:
-        combined = RESULTS_ROOT / 'algorithm1_all_results.csv'
+        combined = root / 'algorithm1_all_results.csv'
         with combined.open('w', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=list(all_rows[0])); writer.writeheader(); writer.writerows(all_rows)
         print('Saved combined results to', combined)
+
+
+def main():
+    for label, (root, theta_overrides, theta_from_max_exported) in RESULTS_ROOTS.items():
+        run_root(label, root, theta_overrides, theta_from_max_exported)
 
 
 if __name__ == '__main__':

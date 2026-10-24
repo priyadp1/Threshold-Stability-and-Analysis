@@ -12,12 +12,11 @@ from arborenum import ArborEnum
 from arborenum_bounds import capture_native_stdout, parse_bounds
 import random
 
-MAX_TREE_SAMPLE = 1000
 RANDOM_SEED = 42
 random.seed(RANDOM_SEED)
-LAMBDA_REG    = 0.005
+LAMBDA_REG    = 0.02
 DEPTH_BUDGET  = 5
-RASHOMON_MULT = 0.01
+RASHOMON_MULT = 0.03
 LOOKAHEAD_K   = 1
 RID_N_BOOT    = 3
 RID_N_SCRAMBLE_EVALS = 5
@@ -29,84 +28,84 @@ BASEDIR = current
 DATA_DIR    = BASEDIR / "DatasetWork"
 RESULTS_DIR = BASEDIR / "standard_arborenum_results"
 DATASETS = {
-    "abalone": {
-        "path": DATA_DIR / "abalone_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "adult": {
-        "path": DATA_DIR / "adult_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "aging": {
-        "path": DATA_DIR / "aging_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "bank": {
-        "path": DATA_DIR / "bank_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "bike": {
-        "path": DATA_DIR / "bike_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "california": {
-        "path": DATA_DIR / "california_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "christine": {
-        "path": DATA_DIR / "christine_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "churn": {
-        "path": DATA_DIR / "churn_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "compas": {
-        "path": DATA_DIR / "compas_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "coupon": {
-        "path": DATA_DIR / "coupon_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "credit": {
-        "path": DATA_DIR / "credit_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+#    "abalone": {
+#        "path": DATA_DIR / "abalone_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "adult": {
+#        "path": DATA_DIR / "adult_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "aging": {
+#        "path": DATA_DIR / "aging_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "bank": {
+#        "path": DATA_DIR / "bank_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "bike": {
+#        "path": DATA_DIR / "bike_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "california": {
+#        "path": DATA_DIR / "california_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "christine": {
+#        "path": DATA_DIR / "christine_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "churn": {
+#        "path": DATA_DIR / "churn_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "compas": {
+#        "path": DATA_DIR / "compas_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "coupon": {
+#        "path": DATA_DIR / "coupon_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "credit": {
+#        "path": DATA_DIR / "credit_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
     "diabetes": {
         "path": DATA_DIR / "diabetes_processed.csv",
         "target_col": "label",
         "drop_cols": ["label"],
         "label_map": None,
     },
-    "diamonds": {
-        "path": DATA_DIR / "diamonds_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+#    "diamonds": {
+#        "path": DATA_DIR / "diamonds_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
     "droid": {
         "path": DATA_DIR / "droid_processed.csv",
         "target_col": "label",
@@ -125,84 +124,84 @@ DATASETS = {
         "drop_cols": ["label"],
         "label_map": None,
     },
-    "jasmine": {
-        "path": DATA_DIR / "jasmine_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "madeline": {
-        "path": DATA_DIR / "madeline_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "magic": {
-        "path": DATA_DIR / "magic_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "monk2": {
-        "path": DATA_DIR / "monk2_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "news": {
-        "path": DATA_DIR / "news_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "phishing": {
-        "path": DATA_DIR / "phishing_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "pol": {
-        "path": DATA_DIR / "pol_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "rl": {
-        "path": DATA_DIR / "rl_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "shopping": {
-        "path": DATA_DIR / "shopping_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "spambase": {
-        "path": DATA_DIR / "spambase_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "student": {
-        "path": DATA_DIR / "student_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "tictactoe": {
-        "path": DATA_DIR / "tictactoe_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "wine": {
-        "path": DATA_DIR / "wine_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+#    "jasmine": {
+#        "path": DATA_DIR / "jasmine_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "madeline": {
+#        "path": DATA_DIR / "madeline_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "magic": {
+#        "path": DATA_DIR / "magic_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "monk2": {
+#        "path": DATA_DIR / "monk2_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "news": {
+#        "path": DATA_DIR / "news_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "phishing": {
+#        "path": DATA_DIR / "phishing_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "pol": {
+#        "path": DATA_DIR / "pol_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "rl": {
+#        "path": DATA_DIR / "rl_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "shopping": {
+#        "path": DATA_DIR / "shopping_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "spambase": {
+#        "path": DATA_DIR / "spambase_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "student": {
+#        "path": DATA_DIR / "student_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "tictactoe": {
+#        "path": DATA_DIR / "tictactoe_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
+#    "wine": {
+#        "path": DATA_DIR / "wine_processed.csv",
+#        "target_col": "label",
+#        "drop_cols": ["label"],
+#        "label_map": None,
+#    },
 }
 
 
@@ -313,6 +312,7 @@ def fit_model(X_train, y_train):
             rashomon_mult= RASHOMON_MULT,
             lookahead_k = LOOKAHEAD_K,
             max_number_thresholds_per_feature=None,
+            proxy_features_column_elimination=True,
             key_mode="hash"
         )
     return model, parse_bounds(log["text"])
@@ -374,14 +374,13 @@ def save_interval_inputs(model, X_train, y_train, sampled_tree_indices, n_trees,
         "n_exported_trees": len(exported_trees),
         "complete_enumeration_export": len(exported_trees) == n_trees,
         "feature_names": list(X_train.columns),
-        "parameters": {
-            "lambda_reg": LAMBDA_REG,
-            "depth_budget": DEPTH_BUDGET,
-            "rashomon_mult": RASHOMON_MULT,
-            "lookahead_k": LOOKAHEAD_K,
-            "max_tree_sample": MAX_TREE_SAMPLE,
-            "random_seed": RANDOM_SEED,
-        },
+#    "parameters": {
+#        "lambda_reg": LAMBDA_REG,
+#        "depth_budget": DEPTH_BUDGET,
+#        "rashomon_mult": RASHOMON_MULT,
+#        "lookahead_k": LOOKAHEAD_K,
+#        "random_seed": RANDOM_SEED,
+#    },
         # Cutoff ArborEnum used: trees in the set have objective <= objective_bound
         "arborenum_bounds": bounds,
         "trees": exported_trees,
@@ -423,12 +422,7 @@ def run_dataset(dataset_name, cfg):
     print_split_diagnostics(model, out_dir)
 
     n_trees = model.count_trees()
-    if n_trees <= MAX_TREE_SAMPLE:
-        sampled_tree_indices = list(range(n_trees))
-    else:
-        sampled_tree_indices = sorted(
-            random.sample(range(n_trees), MAX_TREE_SAMPLE)
-        )
+    sampled_tree_indices = list(range(n_trees))
 
     tree_idx = 0   # Keep for evaluation and visualization
     test_preds = model.get_predictions(tree_idx, X_test)
@@ -506,6 +500,7 @@ def run_dataset(dataset_name, cfg):
             rashomon_mult=RASHOMON_MULT,
             lookahead_k=LOOKAHEAD_K,
             max_number_thresholds_per_feature=None,
+            proxy_features_column_elimination=True,
             n_boot=RID_N_BOOT,
             n_scramble_evals=RID_N_SCRAMBLE_EVALS,
             seed=RID_SEED,
