@@ -82,4 +82,24 @@ dtype: int64
 Shape: 
 (958, 28)
 Columns: 
-['top-left-square_b', 'top-left-square_o', 'top-left-square_x', 'top-middle-square_b', 'top-middle-square_o', 'top-middle-square_x', 'top-right-square_b', 'top-right-square_o', 'top-right-square_x', 'middle-left-square_b', 'middle-left-square_o', 'middle-left-square_x', 'middle-middle-square_b', 'middle-middle-square_o', 'middle-middle-square_x', 'middle-right-square_b', 'middle-right-square_o', 'middle-right-square_x', 'bottom-left-square_b', 'bottom-left-square_o', 'bottom-left-square_x', 'bottom-middle-square_b', 'bottom-middle-square_o', 'bottom-middle-square_x', 'bottom-right-square_b', 'bottom-right-square_o', 'bottom-right-square_x', 'label']
+['top-left-square_b', 'top-left-square_o', 'top-left-square_x', 'top-middle-square_b', 'top-middle-square_o', 'top-middle-square_x', 'top-right-square_b', 'top-right-square_o', 'top-right-square_x', 'middle-left-square_b', 'middle-left-square_o', 'middle-left-square_x', 'middle-middle-square_b', 'middle-middle-square_o', 'middle-middle-square_x', 'middle-right-square_b', 'middle-right-square_o', 'middle-right-square_x', 'bottom-left-square_b', 'bottom-left-square_o', 'bottom-left-square_x', 'bottom-middle-square_b', 'bottom-middle-square_o', 'bottom-middle-square_x', 'bottom-right-square_b', 'bottom-right-square_o', 'bottom-right-square_x', 'label']label
+1    626
+0    332
+Name: count, dtype: int64First 5 rows: 
+   top-left-square_b  top-left-square_o  ...  bottom-right-square_x  label
+0                  0                  0  ...                      1      0
+1                  0                  0  ...                      0      0
+2                  0                  0  ...                      1      0
+3                  0                  1  ...                      1      0
+4                  0                  0  ...                      0      0
+
+[5 rows x 28 columns]
+Last 5 rows: 
+     top-left-square_b  top-left-square_o  ...  bottom-right-square_x  label
+953                  0                  1  ...                      0      1
+954                  0                  0  ...                      1      1
+955                  1                  0  ...                      1      1
+956                  0                  1  ...                      0      0
+957                  1                  0  ...                      1      1
+
+[5 rows x 28 columns]

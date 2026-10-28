@@ -42,4 +42,20 @@ dtype: int64
 Shape: 
 (4177, 8)
 Columns: 
-['Length', 'Diameter', 'Height', 'Whole_weight', 'Shucked_weight', 'Viscera_weight', 'Shell_weight', 'label']
+['Length', 'Diameter', 'Height', 'Whole_weight', 'Shucked_weight', 'Viscera_weight', 'Shell_weight', 'label']label
+0    2649
+1    1528
+Name: count, dtype: int64First 5 rows: 
+   Length  Diameter  Height  Whole_weight  Shucked_weight  Viscera_weight  Shell_weight  label
+0   0.455     0.365   0.095        0.5140          0.2245          0.1010         0.150      1
+1   0.350     0.265   0.090        0.2255          0.0995          0.0485         0.070      1
+2   0.530     0.420   0.135        0.6770          0.2565          0.1415         0.210      0
+3   0.440     0.365   0.125        0.5160          0.2155          0.1140         0.155      1
+4   0.330     0.255   0.080        0.2050          0.0895          0.0395         0.055      0
+Last 5 rows: 
+      Length  Diameter  Height  Whole_weight  Shucked_weight  Viscera_weight  Shell_weight  label
+4172   0.565     0.450   0.165        0.8870          0.3700          0.2390        0.2490      0
+4173   0.590     0.440   0.135        0.9660          0.4390          0.2145        0.2605      1
+4174   0.600     0.475   0.205        1.1760          0.5255          0.2875        0.3080      1
+4175   0.625     0.485   0.150        1.0945          0.5310          0.2610        0.2960      0
+4176   0.710     0.555   0.195        1.9485          0.9455          0.3765        0.4950      1

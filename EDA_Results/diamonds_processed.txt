@@ -70,4 +70,24 @@ dtype: int64
 Shape: 
 (53940, 22)
 Columns: 
-['carat', 'depth', 'table', 'x', 'y', 'z', 'color_0', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'clarity_0', 'clarity_1', 'clarity_2', 'clarity_3', 'clarity_4', 'clarity_5', 'clarity_6', 'clarity_7', 'label']
+['carat', 'depth', 'table', 'x', 'y', 'z', 'color_0', 'color_1', 'color_2', 'color_3', 'color_4', 'color_5', 'color_6', 'clarity_0', 'clarity_1', 'clarity_2', 'clarity_3', 'clarity_4', 'clarity_5', 'clarity_6', 'clarity_7', 'label']label
+0    32389
+1    21551
+Name: count, dtype: int64First 5 rows: 
+   carat  depth  table     x     y     z  ...  clarity_3  clarity_4  clarity_5  clarity_6  clarity_7  label
+0   0.23   61.5   55.0  3.95  3.98  2.43  ...          1          0          0          0          0      1
+1   0.21   59.8   61.0  3.89  3.84  2.31  ...          0          0          0          0          0      0
+2   0.23   56.9   65.0  4.05  4.07  2.31  ...          0          1          0          0          0      0
+3   0.29   62.4   58.0  4.20  4.23  2.63  ...          0          0          1          0          0      0
+4   0.31   63.3   58.0  4.34  4.35  2.75  ...          1          0          0          0          0      0
+
+[5 rows x 22 columns]
+Last 5 rows: 
+       carat  depth  table     x     y     z  ...  clarity_3  clarity_4  clarity_5  clarity_6  clarity_7  label
+53935   0.72   60.8   57.0  5.75  5.76  3.50  ...          0          0          0          0          0      1
+53936   0.72   63.1   55.0  5.69  5.75  3.61  ...          0          0          0          0          0      0
+53937   0.70   62.8   60.0  5.66  5.68  3.56  ...          0          0          0          0          0      0
+53938   0.86   61.0   58.0  6.15  6.12  3.74  ...          1          0          0          0          0      0
+53939   0.75   62.2   55.0  5.83  5.87  3.64  ...          1          0          0          0          0      1
+
+[5 rows x 22 columns]

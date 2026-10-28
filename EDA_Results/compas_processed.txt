@@ -64,4 +64,24 @@ dtype: int64
 Shape: 
 (4966, 20)
 Columns: 
-['age', 'juv_misd_count', 'priors_count', 'sex_0', 'sex_1', 'age_cat_25-45_0', 'age_cat_25-45_1', 'age_cat_Greaterthan45_0', 'age_cat_Greaterthan45_1', 'age_cat_Lessthan25_0', 'age_cat_Lessthan25_1', 'race_African-American_0', 'race_African-American_1', 'race_Caucasian_0', 'race_Caucasian_1', 'c_charge_degree_F_0', 'c_charge_degree_F_1', 'c_charge_degree_M_0', 'c_charge_degree_M_1', 'label']
+['age', 'juv_misd_count', 'priors_count', 'sex_0', 'sex_1', 'age_cat_25-45_0', 'age_cat_25-45_1', 'age_cat_Greaterthan45_0', 'age_cat_Greaterthan45_1', 'age_cat_Lessthan25_0', 'age_cat_Lessthan25_1', 'race_African-American_0', 'race_African-American_1', 'race_Caucasian_0', 'race_Caucasian_1', 'c_charge_degree_F_0', 'c_charge_degree_F_1', 'c_charge_degree_M_0', 'c_charge_degree_M_1', 'label']label
+0    2483
+1    2483
+Name: count, dtype: int64First 5 rows: 
+   age  juv_misd_count  priors_count  ...  c_charge_degree_M_0  c_charge_degree_M_1  label
+0   27               0             1  ...                 True                False      0
+1   23               0             2  ...                 True                False      0
+2   61               0             0  ...                False                 True      0
+3   26               0             5  ...                False                 True      0
+4   20               0             0  ...                False                 True      0
+
+[5 rows x 20 columns]
+Last 5 rows: 
+      age  juv_misd_count  priors_count  ...  c_charge_degree_M_0  c_charge_degree_M_1  label
+4961   35               0             8  ...                False                 True      1
+4962   20               0             0  ...                False                 True      1
+4963   30               1            19  ...                 True                False      1
+4964   21               0             0  ...                False                 True      1
+4965   30               0             0  ...                False                 True      1
+
+[5 rows x 20 columns]

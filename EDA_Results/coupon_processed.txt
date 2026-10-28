@@ -75,15 +75,15 @@ dtypes: int64(65)
 memory usage: 55.0 KB
 
  Statistics: 
-       temperature  has_children  toCoupon_GEQ5min  ...  Restaurant20To50_less1  Restaurant20To50_never       label
-count   108.000000    108.000000             108.0  ...              108.000000              108.000000  108.000000
-mean     62.870370      0.398148               1.0  ...                0.592593                0.203704    0.574074
-std      17.971989      0.491798               0.0  ...                0.493643                0.404629    0.496788
-min      30.000000      0.000000               1.0  ...                0.000000                0.000000    0.000000
-25%      55.000000      0.000000               1.0  ...                0.000000                0.000000    0.000000
-50%      55.000000      0.000000               1.0  ...                1.000000                0.000000    1.000000
-75%      80.000000      1.000000               1.0  ...                1.000000                0.000000    1.000000
-max      80.000000      1.000000               1.0  ...                1.000000                1.000000    1.000000
+       temperature  has_children  ...  Restaurant20To50_never       label
+count   108.000000    108.000000  ...              108.000000  108.000000
+mean     62.870370      0.398148  ...                0.203704    0.574074
+std      17.971989      0.491798  ...                0.404629    0.496788
+min      30.000000      0.000000  ...                0.000000    0.000000
+25%      55.000000      0.000000  ...                0.000000    0.000000
+50%      55.000000      0.000000  ...                0.000000    1.000000
+75%      80.000000      1.000000  ...                0.000000    1.000000
+max      80.000000      1.000000  ...                1.000000    1.000000
 
 [8 rows x 65 columns]
  Number of Null Values: 
@@ -102,4 +102,24 @@ Length: 65, dtype: int64
 Shape: 
 (108, 65)
 Columns: 
-['temperature', 'has_children', 'toCoupon_GEQ5min', 'toCoupon_GEQ15min', 'toCoupon_GEQ25min', 'direction_same', 'direction_opp', 'destination_Home', 'destination_No Urgent Place', 'destination_Work', 'passenger_Alone', 'passenger_Friend(s)', 'passenger_Kid(s)', 'weather_Rainy', 'weather_Snowy', 'weather_Sunny', 'time_10AM', 'time_10PM', 'time_2PM', 'time_6PM', 'time_7AM', 'coupon_Bar', 'coupon_Carry out & Take away', 'coupon_Coffee House', 'coupon_Restaurant(20-50)', 'coupon_Restaurant(<20)', 'expiration_1d', 'expiration_2h', 'gender_Female', 'gender_Male', 'age_21', 'age_26', 'age_41', 'maritalStatus_Married partner', 'maritalStatus_Single', 'education_Associates degree', 'education_Bachelors degree', 'education_Graduate degree (Masters or Doctorate)', 'occupation_Computer & Mathematical', 'occupation_Legal', 'occupation_Office & Administrative Support', 'occupation_Sales & Related', 'income_$100000 or More', 'income_$12500 - $24999', 'income_$37500 - $49999', 'income_$87500 - $99999', 'car_Car that is too old to install Onstar :D', 'car_Mazda5', 'car_Scooter and motorcycle', 'car_crossover', 'car_do not drive', 'Bar_gt8', 'Bar_less1', 'Bar_never', 'CoffeeHouse_1~3', 'CoffeeHouse_4~8', 'CoffeeHouse_less1', 'CarryAway_1~3', 'CarryAway_4~8', 'RestaurantLessThan20_1~3', 'RestaurantLessThan20_less1', 'Restaurant20To50_1~3', 'Restaurant20To50_less1', 'Restaurant20To50_never', 'label']
+['temperature', 'has_children', 'toCoupon_GEQ5min', 'toCoupon_GEQ15min', 'toCoupon_GEQ25min', 'direction_same', 'direction_opp', 'destination_Home', 'destination_No Urgent Place', 'destination_Work', 'passenger_Alone', 'passenger_Friend(s)', 'passenger_Kid(s)', 'weather_Rainy', 'weather_Snowy', 'weather_Sunny', 'time_10AM', 'time_10PM', 'time_2PM', 'time_6PM', 'time_7AM', 'coupon_Bar', 'coupon_Carry out & Take away', 'coupon_Coffee House', 'coupon_Restaurant(20-50)', 'coupon_Restaurant(<20)', 'expiration_1d', 'expiration_2h', 'gender_Female', 'gender_Male', 'age_21', 'age_26', 'age_41', 'maritalStatus_Married partner', 'maritalStatus_Single', 'education_Associates degree', 'education_Bachelors degree', 'education_Graduate degree (Masters or Doctorate)', 'occupation_Computer & Mathematical', 'occupation_Legal', 'occupation_Office & Administrative Support', 'occupation_Sales & Related', 'income_$100000 or More', 'income_$12500 - $24999', 'income_$37500 - $49999', 'income_$87500 - $99999', 'car_Car that is too old to install Onstar :D', 'car_Mazda5', 'car_Scooter and motorcycle', 'car_crossover', 'car_do not drive', 'Bar_gt8', 'Bar_less1', 'Bar_never', 'CoffeeHouse_1~3', 'CoffeeHouse_4~8', 'CoffeeHouse_less1', 'CarryAway_1~3', 'CarryAway_4~8', 'RestaurantLessThan20_1~3', 'RestaurantLessThan20_less1', 'Restaurant20To50_1~3', 'Restaurant20To50_less1', 'Restaurant20To50_never', 'label']label
+1    62
+0    46
+Name: count, dtype: int64First 5 rows: 
+   temperature  has_children  toCoupon_GEQ5min  ...  Restaurant20To50_less1  Restaurant20To50_never  label
+0           55             0                 1  ...                       0                       1      1
+1           80             0                 1  ...                       0                       1      0
+2           80             0                 1  ...                       0                       1      1
+3           80             0                 1  ...                       0                       1      0
+4           80             0                 1  ...                       0                       1      1
+
+[5 rows x 65 columns]
+Last 5 rows: 
+     temperature  has_children  toCoupon_GEQ5min  ...  Restaurant20To50_less1  Restaurant20To50_never  label
+103           55             0                 1  ...                       1                       0      1
+104           55             0                 1  ...                       1                       0      1
+105           30             0                 1  ...                       1                       0      1
+106           30             0                 1  ...                       1                       0      1
+107           80             0                 1  ...                       1                       0      1
+
+[5 rows x 65 columns]

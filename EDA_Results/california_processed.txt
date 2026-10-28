@@ -44,4 +44,20 @@ dtype: int64
 Shape: 
 (20634, 9)
 Columns: 
-['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude', 'label']
+['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude', 'label']label
+1    10317
+0    10317
+Name: count, dtype: int64First 5 rows: 
+   MedInc  HouseAge  AveRooms  AveBedrms  Population  AveOccup  Latitude  Longitude  label
+0  2.1827      26.0  4.521429   0.921429       305.0  2.178571     40.05    -122.10      1
+1  3.0755      32.0  4.623068   0.983353      3868.0  4.599287     32.77    -117.06      1
+2  1.8235      40.0  4.701149   1.126437       928.0  3.555556     37.75    -122.16      1
+3  1.4625      37.0  4.247845   1.105603      1673.0  3.605603     33.99    -118.28      1
+4  1.9063      13.0  3.453125   0.984375       286.0  4.468750     33.97    -118.16      1
+Last 5 rows: 
+       MedInc  HouseAge  AveRooms  AveBedrms  Population  AveOccup  Latitude  Longitude  label
+20629  4.3487      29.0  5.930712   1.026217      1554.0  2.910112     38.65    -121.84      0
+20630  5.6790      20.0  6.401274   1.070064       457.0  2.910828     38.56    -122.05      0
+20631  1.9327      10.0  5.789474   1.078947       898.0  3.938596     38.57    -121.92      0
+20632  3.7500      38.0  5.275229   0.981651       259.0  2.376147     38.72    -121.90      0
+20633  2.8542      37.0  5.253731   0.970149       238.0  3.552239     38.84    -121.81      0

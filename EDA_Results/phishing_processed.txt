@@ -88,4 +88,24 @@ dtype: int64
 Shape: 
 (11055, 31)
 Columns: 
-['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwindow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'label']
+['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwindow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'label']label
+1    6157
+0    4898
+Name: count, dtype: int64First 5 rows: 
+   having_ip_address  url_length  shortining_service  ...  links_pointing_to_page  statistical_report  label
+0                 -1           1                   1  ...                       1                   1      0
+1                 -1          -1                  -1  ...                       0                   1      0
+2                  1           0                   1  ...                       0                   1      0
+3                  1          -1                  -1  ...                       1                   1      1
+4                  1          -1                   1  ...                       0                   1      1
+
+[5 rows x 31 columns]
+Last 5 rows: 
+       having_ip_address  url_length  ...  statistical_report  label
+11050                  1          -1  ...                   1      1
+11051                 -1          -1  ...                   1      0
+11052                 -1          -1  ...                   1      0
+11053                  1          -1  ...                   1      1
+11054                  1          -1  ...                   1      1
+
+[5 rows x 31 columns]

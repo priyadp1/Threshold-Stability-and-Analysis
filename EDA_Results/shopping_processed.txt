@@ -86,4 +86,24 @@ dtype: int64
 Shape: 
 (12330, 30)
 Columns: 
-['Administrative', 'Administrative_Duration', 'Informational', 'Informational_Duration', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'OperatingSystems', 'Browser', 'Region', 'TrafficType', 'Month_Aug', 'Month_Dec', 'Month_Feb', 'Month_Jul', 'Month_June', 'Month_Mar', 'Month_May', 'Month_Nov', 'Month_Oct', 'Month_Sep', 'VisitorType_New_Visitor', 'VisitorType_Other', 'VisitorType_Returning_Visitor', 'Weekend_False', 'Weekend_True', 'label']
+['Administrative', 'Administrative_Duration', 'Informational', 'Informational_Duration', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'OperatingSystems', 'Browser', 'Region', 'TrafficType', 'Month_Aug', 'Month_Dec', 'Month_Feb', 'Month_Jul', 'Month_June', 'Month_Mar', 'Month_May', 'Month_Nov', 'Month_Oct', 'Month_Sep', 'VisitorType_New_Visitor', 'VisitorType_Other', 'VisitorType_Returning_Visitor', 'Weekend_False', 'Weekend_True', 'label']label
+0    10422
+1     1908
+Name: count, dtype: int64First 5 rows: 
+   Administrative  Administrative_Duration  Informational  ...  Weekend_False  Weekend_True  label
+0               0                      0.0              0  ...              1             0      0
+1               0                      0.0              0  ...              1             0      0
+2               0                      0.0              0  ...              1             0      0
+3               0                      0.0              0  ...              1             0      0
+4               0                      0.0              0  ...              0             1      0
+
+[5 rows x 30 columns]
+Last 5 rows: 
+       Administrative  Administrative_Duration  Informational  ...  Weekend_False  Weekend_True  label
+12325               3                    145.0              0  ...              0             1      0
+12326               0                      0.0              0  ...              0             1      0
+12327               0                      0.0              0  ...              0             1      0
+12328               4                     75.0              0  ...              1             0      0
+12329               0                      0.0              0  ...              0             1      0
+
+[5 rows x 30 columns]

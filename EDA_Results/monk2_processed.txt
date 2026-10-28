@@ -62,4 +62,24 @@ dtype: int64
 Shape: 
 (601, 18)
 Columns: 
-['attr1_1', 'attr1_2', 'attr1_3', 'attr2_1', 'attr2_2', 'attr2_3', 'attr3_1', 'attr3_2', 'attr4_1', 'attr4_2', 'attr4_3', 'attr5_1', 'attr5_2', 'attr5_3', 'attr5_4', 'attr6_1', 'attr6_2', 'label']
+['attr1_1', 'attr1_2', 'attr1_3', 'attr2_1', 'attr2_2', 'attr2_3', 'attr3_1', 'attr3_2', 'attr4_1', 'attr4_2', 'attr4_3', 'attr5_1', 'attr5_2', 'attr5_3', 'attr5_4', 'attr6_1', 'attr6_2', 'label']label
+0    395
+1    206
+Name: count, dtype: int64First 5 rows: 
+   attr1_1  attr1_2  attr1_3  attr2_1  attr2_2  ...  attr5_3  attr5_4  attr6_1  attr6_2  label
+0        1        0        0        1        0  ...        1        0        0        1      1
+1        1        0        0        0        0  ...        1        0        0        1      1
+2        0        1        0        0        0  ...        0        0        0        1      0
+3        0        0        1        0        1  ...        0        0        1        0      0
+4        0        1        0        0        0  ...        0        0        1        0      0
+
+[5 rows x 18 columns]
+Last 5 rows: 
+     attr1_1  attr1_2  attr1_3  attr2_1  attr2_2  ...  attr5_3  attr5_4  attr6_1  attr6_2  label
+596        0        1        0        1        0  ...        0        0        1        0      0
+597        1        0        0        0        1  ...        0        0        1        0      0
+598        0        1        0        0        0  ...        0        0        1        0      0
+599        1        0        0        1        0  ...        0        1        0        1      0
+600        0        0        1        1        0  ...        0        1        0        1      0
+
+[5 rows x 18 columns]

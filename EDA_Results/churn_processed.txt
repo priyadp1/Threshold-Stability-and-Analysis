@@ -94,4 +94,24 @@ dtype: int64
 Shape: 
 (5000, 34)
 Columns: 
-['state', 'account_length', 'phone_number', 'number_vmail_messages', 'total_day_minutes', 'total_day_calls', 'total_day_charge', 'total_eve_minutes', 'total_eve_calls', 'total_eve_charge', 'total_night_minutes', 'total_night_calls', 'total_night_charge', 'total_intl_minutes', 'total_intl_calls', 'total_intl_charge', 'area_code_408', 'area_code_415', 'area_code_510', 'international_plan_0', 'international_plan_1', 'voice_mail_plan_0', 'voice_mail_plan_1', 'number_customer_service_calls_0', 'number_customer_service_calls_1', 'number_customer_service_calls_2', 'number_customer_service_calls_3', 'number_customer_service_calls_4', 'number_customer_service_calls_5', 'number_customer_service_calls_6', 'number_customer_service_calls_7', 'number_customer_service_calls_8', 'number_customer_service_calls_9', 'label']
+['state', 'account_length', 'phone_number', 'number_vmail_messages', 'total_day_minutes', 'total_day_calls', 'total_day_charge', 'total_eve_minutes', 'total_eve_calls', 'total_eve_charge', 'total_night_minutes', 'total_night_calls', 'total_night_charge', 'total_intl_minutes', 'total_intl_calls', 'total_intl_charge', 'area_code_408', 'area_code_415', 'area_code_510', 'international_plan_0', 'international_plan_1', 'voice_mail_plan_0', 'voice_mail_plan_1', 'number_customer_service_calls_0', 'number_customer_service_calls_1', 'number_customer_service_calls_2', 'number_customer_service_calls_3', 'number_customer_service_calls_4', 'number_customer_service_calls_5', 'number_customer_service_calls_6', 'number_customer_service_calls_7', 'number_customer_service_calls_8', 'number_customer_service_calls_9', 'label']label
+0    4293
+1     707
+Name: count, dtype: int64First 5 rows: 
+   state  account_length  ...  number_customer_service_calls_9  label
+0     16             128  ...                                0      0
+1     35             107  ...                                0      0
+2     31             137  ...                                0      0
+3     35              84  ...                                0      0
+4     36              75  ...                                0      0
+
+[5 rows x 34 columns]
+Last 5 rows: 
+      state  account_length  ...  number_customer_service_calls_9  label
+4995     11              50  ...                                0      0
+4996     49             152  ...                                0      1
+4997      7              61  ...                                0      0
+4998      7             109  ...                                0      0
+4999     46              86  ...                                0      0
+
+[5 rows x 34 columns]
