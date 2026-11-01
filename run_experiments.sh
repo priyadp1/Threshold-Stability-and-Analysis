@@ -7,7 +7,7 @@ mkdir -p "$LOG_DIR"
 STAMP="$(date +%Y%m%d_%H%M%S)"
 
 status=0
-for script in run_standard_arborenum.py run_anytime_arborenum.py; do
+for script in run_standard_arborenum.py run_anytime_arborenum.py run_PRAXIS.py; do
     log="$LOG_DIR/${script%.py}_$STAMP.log"
     echo "==> $script (log: $log)"
     start=$SECONDS

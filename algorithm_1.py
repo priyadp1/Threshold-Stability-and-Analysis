@@ -340,12 +340,14 @@ def describe_tree(sig, bounds_iter, grids, columns):
 
 STANDARD_RESULTS_ROOT = Path(__file__).resolve().parent / 'standard_arborenum_results'
 ANYTIME_RESULTS_ROOT = Path(__file__).resolve().parent / 'anytime_arborenum_results'
+PRAIXS_RESULTS_ROOT = Path(__file__).resolve().parent / 'praxis_results'
 METHODS = ['band', 'profile', 'exact']
 # Per-root theta overrides: the two runs use different lambda/Rashomon settings, so cutoffs are not shared.
 # Last field: fall back to the max exported objective when no ArborEnum bound was saved (anytime only).
 RESULTS_ROOTS = {
     'standard': (STANDARD_RESULTS_ROOT, {}, False),
     'anytime': (ANYTIME_RESULTS_ROOT, {}, True),
+    'praxis': (PRAIXS_RESULTS_ROOT, {}, False),
 }
 
 

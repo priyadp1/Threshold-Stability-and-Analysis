@@ -18,4 +18,4 @@ conda activate py312
 python --version
 
 # Run ArborEnum experiments
-bash run_arborenum.sh
+bash run_experiments.sh
