@@ -58,12 +58,12 @@ DATASETS = {
         "drop_cols": ["label"],
         "label_map": None,
     },
-    "california": {
-        "path": DATA_DIR / "california_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+    # "california": {
+    #     "path": DATA_DIR / "california_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
     "christine": {
         "path": DATA_DIR / "christine_processed.csv",
         "target_col": "label",
