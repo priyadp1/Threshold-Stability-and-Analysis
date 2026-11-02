@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-cd "$(dirname "$0")"
+cd "${SLURM_SUBMIT_DIR:-$(pwd)}" || exit 1
 PYTHON="${PYTHON:-python3}"
 LOG_DIR="logs"
 mkdir -p "$LOG_DIR"
