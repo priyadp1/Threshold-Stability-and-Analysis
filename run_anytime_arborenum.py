@@ -22,8 +22,8 @@ RID_N_BOOT    = 3
 RID_N_SCRAMBLE_EVALS = 5
 RID_SEED      = 0
 SECOND_RASHOMON_MULT = RASHOMON_MULT   # paper's anytime run does not extend the root budget
-RUNTIME_LIMIT_SECONDS = 600
-MEMORY_LIMIT_MB = 16000   # 24 GB machine; leave headroom for the OS
+RUNTIME_LIMIT_SECONDS = 1200
+MEMORY_LIMIT_MB = 32000   # 32 GB machine; leave headroom for the OS
 current = Path(__file__).resolve()
 while current.name != "Threshold-Stability-and-Analysis":
     current = current.parent
@@ -417,7 +417,7 @@ def run_dataset(dataset_name, cfg):
         "arborenum_tree_size.json",
         "arborenum_sampled_trees.json",
         "arborenum_first_tree_paths.txt",
-        "arborenum_rid.json",
+        # "arborenum_rid.json",
         "interval_inputs/interval_inputs.json",
         "arborenum_feature_mapping.json",
     ]
@@ -502,39 +502,39 @@ def run_dataset(dataset_name, cfg):
 
     feature_names = list(X_train.columns)
 
-    print(f"  [ARBORENUM] Computing Rashomon Importance Distribution...")
-    try:
-        rid_start = time.perf_counter()
-        rid_out = model.compute_rid(
-            X_train,
-            y_train,
-            early_stopping=True,
-            proxy_mode="continuous",
-            lambda_reg=LAMBDA_REG,
-            depth_budget=DEPTH_BUDGET,
-            rashomon_mult=RASHOMON_MULT,
-            lookahead_k=LOOKAHEAD_K,
-            max_number_thresholds_per_feature=None,
-            proxy_refinement="off",
-            second_rashomon_mult=SECOND_RASHOMON_MULT,
-            multiplier_step_size=0.0025,
-            runtime_limit_seconds=RUNTIME_LIMIT_SECONDS,
-            memory_limit_mb=MEMORY_LIMIT_MB,
-            n_boot=RID_N_BOOT,
-            n_scramble_evals=RID_N_SCRAMBLE_EVALS,
-            seed=RID_SEED,
-            memory_efficient=False,
-        )
-        rid_duration = time.perf_counter() - rid_start
+    # print(f"  [ARBORENUM] Computing Rashomon Importance Distribution...")
+    # try:
+        # rid_start = time.perf_counter()
+        # rid_out = model.compute_rid(
+            # X_train,
+            # y_train,
+            # early_stopping=True,
+            # proxy_mode="continuous",
+            # lambda_reg=LAMBDA_REG,
+            # depth_budget=DEPTH_BUDGET,
+            # rashomon_mult=RASHOMON_MULT,
+            # lookahead_k=LOOKAHEAD_K,
+            # max_number_thresholds_per_feature=None,
+            # proxy_refinement="off",
+            # second_rashomon_mult=SECOND_RASHOMON_MULT,
+            # multiplier_step_size=0.0025,
+            # runtime_limit_seconds=RUNTIME_LIMIT_SECONDS,
+            # memory_limit_mb=MEMORY_LIMIT_MB,
+            # n_boot=RID_N_BOOT,
+            # n_scramble_evals=RID_N_SCRAMBLE_EVALS,
+            # seed=RID_SEED,
+            # memory_efficient=False,
+        # )
+        # rid_duration = time.perf_counter() - rid_start
 
-        with open(out_dir / "arborenum_rid.json", "w") as f:
-            json.dump(
-                {
-                    "feature_names": feature_names,
-                    "mean_sub_mr": [float(v) for v in rid_out["mean_sub_mr"]],
-                },
-                f,
-            )
+        # with open(out_dir / "arborenum_rid.json", "w") as f:
+            # json.dump(
+                # {
+                    # "feature_names": feature_names,
+                    # "mean_sub_mr": [float(v) for v in rid_out["mean_sub_mr"]],
+                # },
+                # f,
+            # )
 
         # fig, _ = model.rid_plot_mean(feature_names=feature_names, show=False)
         # fig.savefig(out_dir / "praxis_rid_mean.png", dpi=150, bbox_inches="tight")
@@ -548,10 +548,10 @@ def run_dataset(dataset_name, cfg):
         # fig.savefig(out_dir / "praxis_rid_cdfs.png", dpi=150, bbox_inches="tight")
         # plt.close(fig)
 
-        rid_error = None
-    except Exception as e:
-        rid_duration = 0.0
-        rid_error = str(e)
+        # rid_error = None
+    # except Exception as e:
+        # rid_duration = 0.0
+        # rid_error = str(e)
 
 
     print("Get Tree Paths:")
@@ -578,10 +578,10 @@ def run_dataset(dataset_name, cfg):
             f.write(f"\nTree Size (tree 0): {tree_size['n_leaves']} leaves, {tree_size['n_nodes']} total nodes")
         else:
             f.write(f"\nTree Size: Error - {tree_size['error']}")
-        if rid_error is None:
-            f.write(f"\nRID computed in {rid_duration:.2f} seconds (see praxis_rid.json)")
-        else:
-            f.write(f"\nRID: Error - {rid_error}")
+        # if rid_error is None:
+            # f.write(f"\nRID computed in {rid_duration:.2f} seconds (see praxis_rid.json)")
+        # else:
+            # f.write(f"\nRID: Error - {rid_error}")
 
     print(f"  [ARBORENUM] Accuracy: {acc:.4f} | Time: {duration:.2f}s | Trees: {n_trees}")
 

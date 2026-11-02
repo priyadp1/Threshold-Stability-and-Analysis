@@ -145,7 +145,7 @@ def run_dataset(dataset_name, cfg):
         "praxis_tree_size.json",
         "praxis_sampled_trees.json",
         "praxis_first_tree_paths.txt",
-        "praxis_rid.json",
+        # "praxis_rid.json",
         "interval_inputs/interval_inputs.json",
         "praxis_feature_mapping.json",
     ]
@@ -240,40 +240,40 @@ def run_dataset(dataset_name, cfg):
 
     feature_names = list(X_train.columns)
 
-    print(f"  [PRAXIS] Computing Rashomon Importance Distribution...")
-    try:
+    # print(f"  [PRAXIS] Computing Rashomon Importance Distribution...")
+    # try:
         # Group binarized columns by original feature so RID reports importance per original feature
-        binning_map = binarizer.feature_map()
-        rid_start = time.perf_counter()
-        rid_out = model.compute_rid(
-            X_train_bin,
-            y_train,
-            n_boot=RID_N_BOOT,
-            n_scramble_evals=RID_N_SCRAMBLE_EVALS,
-            lambda_reg=LAMBDA_REG,
-            depth_budget=DEPTH_BUDGET,
-            rashomon_mult=RASHOMON_MULT,
-            lookahead_k=LOOKAHEAD_K,
-            seed=RID_SEED,
-            memory_efficient=False,
-            binning_map=binning_map,
-        )
-        rid_duration = time.perf_counter() - rid_start
+        # binning_map = binarizer.feature_map()
+        # rid_start = time.perf_counter()
+        # rid_out = model.compute_rid(
+            # X_train_bin,
+            # y_train,
+            # n_boot=RID_N_BOOT,
+            # n_scramble_evals=RID_N_SCRAMBLE_EVALS,
+            # lambda_reg=LAMBDA_REG,
+            # depth_budget=DEPTH_BUDGET,
+            # rashomon_mult=RASHOMON_MULT,
+            # lookahead_k=LOOKAHEAD_K,
+            # seed=RID_SEED,
+            # memory_efficient=False,
+            # binning_map=binning_map,
+        # )
+        # rid_duration = time.perf_counter() - rid_start
 
-        rid_feature_indices = sorted(binning_map.keys())
-        with open(out_dir / "praxis_rid.json", "w") as f:
-            json.dump(
-                {
-                    "feature_names": [feature_names[j] for j in rid_feature_indices],
-                    "mean_sub_mr": [float(v) for v in rid_out["mean_sub_mr"]],
-                },
-                f,
-            )
+        # rid_feature_indices = sorted(binning_map.keys())
+        # with open(out_dir / "praxis_rid.json", "w") as f:
+            # json.dump(
+                # {
+                    # "feature_names": [feature_names[j] for j in rid_feature_indices],
+                    # "mean_sub_mr": [float(v) for v in rid_out["mean_sub_mr"]],
+                # },
+                # f,
+            # )
 
-        rid_error = None
-    except Exception as e:
-        rid_duration = 0.0
-        rid_error = str(e)
+        # rid_error = None
+    # except Exception as e:
+        # rid_duration = 0.0
+        # rid_error = str(e)
 
 
     print("Get Tree Paths:")
@@ -300,10 +300,10 @@ def run_dataset(dataset_name, cfg):
             f.write(f"\nTree Size (tree 0): {tree_size['n_leaves']} leaves, {tree_size['n_nodes']} total nodes")
         else:
             f.write(f"\nTree Size: Error - {tree_size['error']}")
-        if rid_error is None:
-            f.write(f"\nRID computed in {rid_duration:.2f} seconds (see praxis_rid.json)")
-        else:
-            f.write(f"\nRID: Error - {rid_error}")
+        # if rid_error is None:
+            # f.write(f"\nRID computed in {rid_duration:.2f} seconds (see praxis_rid.json)")
+        # else:
+            # f.write(f"\nRID: Error - {rid_error}")
 
     print(f"  [PRAXIS] Accuracy: {acc:.4f} | Time: {duration:.2f}s | Trees: {n_trees}")
 
