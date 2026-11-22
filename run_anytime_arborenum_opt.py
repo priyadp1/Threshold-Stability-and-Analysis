@@ -29,7 +29,7 @@ while current.name != "Threshold-Stability-and-Analysis":
     current = current.parent
 BASEDIR = current
 DATA_DIR    = BASEDIR / "DatasetWork"
-RESULTS_DIR = BASEDIR / "anytime_arborenum_results"
+RESULTS_DIR = BASEDIR / "anytime_arborenum_results_opt"
 DATASETS = {
     "abalone": {
         "path": DATA_DIR / "abalone_processed.csv",
@@ -43,12 +43,12 @@ DATASETS = {
         "drop_cols": ["label"],
         "label_map": None,
     },
-    # "aging": {
-    #     "path": DATA_DIR / "aging_processed.csv",
-    #     "target_col": "label",
-    #     "drop_cols": ["label"],
-    #     "label_map": None,
-    # },
+    "aging": {
+        "path": DATA_DIR / "aging_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     "bank": {
         "path": DATA_DIR / "bank_processed.csv",
         "target_col": "label",
@@ -73,18 +73,18 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    "churn": {
-        "path": DATA_DIR / "churn_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    # "compas": {
-    #     "path": DATA_DIR / "compas_processed.csv",
+    # "churn": {
+    #     "path": DATA_DIR / "churn_processed.csv",
     #     "target_col": "label",
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
+    "compas": {
+        "path": DATA_DIR / "compas_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     # "coupon": {
     #     "path": DATA_DIR / "coupon_processed.csv",
     #     "target_col": "label",
@@ -97,36 +97,36 @@ DATASETS = {
         "drop_cols": ["label"],
         "label_map": None,
     },
-    # "diabetes": {
-    #     "path": DATA_DIR / "diabetes_processed.csv",
-    #     "target_col": "label",
-    #     "drop_cols": ["label"],
-    #     "label_map": None,
-    # },
-    "diamonds": {
-        "path": DATA_DIR / "diamonds_processed.csv",
+    "diabetes": {
+        "path": DATA_DIR / "diabetes_processed.csv",
         "target_col": "label",
         "drop_cols": ["label"],
         "label_map": None,
     },
-    # "droid": {
-    #     "path": DATA_DIR / "droid_processed.csv",
+    # "diamonds": {
+    #     "path": DATA_DIR / "diamonds_processed.csv",
     #     "target_col": "label",
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    "helena": {
-        "path": DATA_DIR / "helena_processed.csv",
+    "droid": {
+        "path": DATA_DIR / "droid_processed.csv",
         "target_col": "label",
         "drop_cols": ["label"],
         "label_map": None,
     },
-    # "heloc": {
-    #     "path": DATA_DIR / "heloc_processed.csv",
+    # "helena": {
+    #     "path": DATA_DIR / "helena_processed.csv",
     #     "target_col": "label",
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
+    "heloc": {
+        "path": DATA_DIR / "heloc_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     # "jasmine": {
     #     "path": DATA_DIR / "jasmine_processed.csv",
     #     "target_col": "label",
@@ -157,12 +157,12 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    # "phishing": {
-    #     "path": DATA_DIR / "phishing_processed.csv",
-    #     "target_col": "label",
-    #     "drop_cols": ["label"],
-    #     "label_map": None,
-    # },
+    "phishing": {
+        "path": DATA_DIR / "phishing_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     # "pol": {
     #     "path": DATA_DIR / "pol_processed.csv",
     #     "target_col": "label",
@@ -187,12 +187,12 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    # "student": {
-    #     "path": DATA_DIR / "student_processed.csv",
-    #     "target_col": "label",
-    #     "drop_cols": ["label"],
-    #     "label_map": None,
-    # },
+    "student": {
+        "path": DATA_DIR / "student_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     # "tictactoe": {
     #     "path": DATA_DIR / "tictactoe_processed.csv",
     #     "target_col": "label",
