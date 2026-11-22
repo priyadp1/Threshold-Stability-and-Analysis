@@ -2,3 +2,8 @@
 standard_arborenum_results/
 anytime_arborenum_results/
 __pycache__/
+# ArborEnum build artifacts
+*.so
+.nfs*
+build/
+*.egg-info/
