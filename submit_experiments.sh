@@ -8,8 +8,23 @@
 
 set -e
 
+cd "${SLURM_SUBMIT_DIR:-$(dirname "$0")}"
+
+# Initialize Conda
+source "$(conda info --base)/etc/profile.d/conda.sh"
+
+# Activate ArborEnum (optimized) environment
+conda activate arbor_opt
+
 # Verify Python
 python --version
+
+# Build/install the vendored ArborEnum (with the optimized C++ core) if missing
+if ! python -c "import arborenum.optimized" 2>/dev/null; then
+    echo "Installing vendored ArborEnum from ./ArborEnum ..."
+    python -m pip install ./ArborEnum
+fi
+python -c "import arborenum.optimized; print('arborenum OK:', arborenum.__file__)"
 
 # Run ArborEnum experiments
 bash run_arborenum_anytime_opt.sh &
