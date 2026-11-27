@@ -8,12 +8,6 @@
 
 set -e
 
-# Initialize Conda
-source "$(conda info --base)/etc/profile.d/conda.sh"
-
-# Activate Python 3.12 environment
-conda activate py312
-
 # Verify Python
 python --version
 
