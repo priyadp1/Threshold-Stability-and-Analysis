@@ -5,11 +5,11 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import random
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from praxis import PRAXIS
 from praxis import ThresholdGuessBinarizer
-from run_standard_arborenum import DATASETS, load_dataset
-import random
 
 RANDOM_SEED = 42
 random.seed(RANDOM_SEED)
@@ -24,7 +24,210 @@ current = Path(__file__).resolve()
 while current.name != "Threshold-Stability-and-Analysis":
     current = current.parent
 BASEDIR = current
+DATA_DIR    = BASEDIR / "DatasetWork"
 RESULTS_DIR = BASEDIR / "praxis_results"
+DATASETS = {
+    # "abalone": {
+    #     "path": DATA_DIR / "abalone_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "adult": {
+    #     "path": DATA_DIR / "adult_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "aging": {
+        "path": DATA_DIR / "aging_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "bank": {
+    #     "path": DATA_DIR / "bank_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "bike": {
+    #     "path": DATA_DIR / "bike_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "california": {
+    #     "path": DATA_DIR / "california_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "christine": {
+    #     "path": DATA_DIR / "christine_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "churn": {
+    #     "path": DATA_DIR / "churn_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "compas": {
+        "path": DATA_DIR / "compas_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "coupon": {
+    #     "path": DATA_DIR / "coupon_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "credit": {
+    #     "path": DATA_DIR / "credit_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "diabetes": {
+        "path": DATA_DIR / "diabetes_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "diamonds": {
+    #     "path": DATA_DIR / "diamonds_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "droid": {
+    #     "path": DATA_DIR / "droid_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "helena": {
+    #     "path": DATA_DIR / "helena_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "heloc": {
+        "path": DATA_DIR / "heloc_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "jasmine": {
+    #     "path": DATA_DIR / "jasmine_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "madeline": {
+    #     "path": DATA_DIR / "madeline_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "magic": {
+    #     "path": DATA_DIR / "magic_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "monk2": {
+    #     "path": DATA_DIR / "monk2_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "news": {
+    #     "path": DATA_DIR / "news_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "phishing": {
+        "path": DATA_DIR / "phishing_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    "pol": {
+        "path": DATA_DIR / "pol_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "rl": {
+    #     "path": DATA_DIR / "rl_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    "shopping": {
+        "path": DATA_DIR / "shopping_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    "spambase": {
+        "path": DATA_DIR / "spambase_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    "student": {
+        "path": DATA_DIR / "student_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
+    # "tictactoe": {
+    #     "path": DATA_DIR / "tictactoe_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "wine": {
+    #     "path": DATA_DIR / "wine_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+}
+
+def load_dataset(cfg):
+    df = pd.read_csv(cfg["path"])
+    if cfg.get("na_strategy") == "drop_columns":
+        df = df.drop(columns=cfg["cols_to_drop_for_na"])
+    else:
+        df = df.dropna(axis=1, how="all")
+        df = df.dropna()
+
+    if cfg["label_map"]:
+        df[cfg["target_col"]] = df[cfg["target_col"]].map(cfg["label_map"])
+
+    X = df.drop(columns=cfg["drop_cols"])
+    y = df[cfg["target_col"]]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=RANDOM_SEED, stratify=y
+    )
+
+    cat_cols = X_train.select_dtypes(include=["object", "category"]).columns.tolist()
+    if cat_cols:
+        X_train = pd.get_dummies(X_train, columns=cat_cols, drop_first=False)
+        X_test = pd.get_dummies(X_test, columns=cat_cols, drop_first=False)
+        X_train, X_test = X_train.align(X_test, join="left", axis=1, fill_value=0)
+
+    return X_train, X_test, y_train.reset_index(drop=True), y_test.reset_index(drop=True)
 
 
 def binarize(X_train, X_test, y_train):

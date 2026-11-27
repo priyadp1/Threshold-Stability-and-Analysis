@@ -1,6 +1,10 @@
 .DS_Store
 standard_arborenum_results/
 anytime_arborenum_results/
+standard_arborenum_results_opt/
+anytime_arborenum_results_opt/
+praxis_results/
+logs/
 __pycache__/
 # ArborEnum build artifacts
 *.so
