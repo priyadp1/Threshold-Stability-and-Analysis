@@ -27,11 +27,11 @@ fi
 python -c "import arborenum.optimized; print('arborenum OK:', arborenum.__file__)"
 
 # Run ArborEnum experiments
-bash run_arborenum_anytime_opt.sh &
-pid1=$!
-bash run_arborenum_standard_opt.sh &
-pid2=$!
-status=0
-wait $pid1 || { echo "anytime failed" >&2; status=1; }
-wait $pid2 || { echo "standard failed" >&2; status=1; }
+bash run_arborenum_anytime_opt.sh #&
+#pid1=$!
+#bash run_arborenum_standard_opt.sh &
+#pid2=$!
+#status=0
+#wait $pid1 || { echo "anytime failed" >&2; status=1; }
+#wait $pid2 || { echo "standard failed" >&2; status=1; }
 exit $status

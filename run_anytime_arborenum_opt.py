@@ -73,12 +73,12 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    "churn": {
-        "path": DATA_DIR / "churn_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+    # "churn": {
+    #     "path": DATA_DIR / "churn_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
     # "compas": {
     #     "path": DATA_DIR / "compas_processed.csv",
     #     "target_col": "label",
@@ -103,12 +103,12 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    # "diamonds": {
-    #     "path": DATA_DIR / "diamonds_processed.csv",
-    #     "target_col": "label",
-    #     "drop_cols": ["label"],
-    #     "label_map": None,
-    # },
+    "diamonds": {
+        "path": DATA_DIR / "diamonds_processed.csv",
+        "target_col": "label",
+        "drop_cols": ["label"],
+        "label_map": None,
+    },
     # "droid": {
     #     "path": DATA_DIR / "droid_processed.csv",
     #     "target_col": "label",
@@ -163,30 +163,30 @@ DATASETS = {
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    "pol": {
-        "path": DATA_DIR / "pol_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+    # "pol": {
+    #     "path": DATA_DIR / "pol_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
     # "rl": {
     #     "path": DATA_DIR / "rl_processed.csv",
     #     "target_col": "label",
     #     "drop_cols": ["label"],
     #     "label_map": None,
     # },
-    "shopping": {
-        "path": DATA_DIR / "shopping_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
-    "spambase": {
-        "path": DATA_DIR / "spambase_processed.csv",
-        "target_col": "label",
-        "drop_cols": ["label"],
-        "label_map": None,
-    },
+    # "shopping": {
+    #     "path": DATA_DIR / "shopping_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
+    # "spambase": {
+    #     "path": DATA_DIR / "spambase_processed.csv",
+    #     "target_col": "label",
+    #     "drop_cols": ["label"],
+    #     "label_map": None,
+    # },
     # "student": {
     #     "path": DATA_DIR / "student_processed.csv",
     #     "target_col": "label",
