@@ -3,6 +3,8 @@ standard_arborenum_results/
 anytime_arborenum_results/
 standard_arborenum_results_opt/
 anytime_arborenum_results_opt/
+algo_1_greedy/
+algo_1_optimal/
 praxis_results/
 logs/
 __pycache__/
